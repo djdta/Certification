@@ -5,7 +5,7 @@
 
 
 | Assessment Type | Multiple choice
-| -------- | ---------- |
+| --------------- | -------------- |
 | Format Online | proctored
 | Duration | 1 hour
 | Price | $70.50 USD plus locally applicable taxes and fees
