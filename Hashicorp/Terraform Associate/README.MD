@@ -1,3 +1,5 @@
+![terraform](./images/logo-hashicorp-3f10732f.svg)
+
 ## Exam Details
 
 
