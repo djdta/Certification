@@ -1,7 +1,6 @@
 ![terraform](./Images/Terraform_PrimaryLogo_FullColor_RGB.png)
 
 
-C:\GitHub\Certification\Hashicorp\Terraform Associate\Images\Terraform_PrimaryLogo_FullColor_RGB.png
 ## Exam Details
 
 
