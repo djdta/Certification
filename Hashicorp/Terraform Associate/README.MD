@@ -1,4 +1,4 @@
-![terraform](./Images/logo-hashicorp-3f10732f.svg)
+![terraform](./Images/Terraform_PrimaryLogo_FullColor_RGB.png)
 
 ## Exam Details
 
