@@ -1,0 +1,1 @@
+https://www.vaultproject.io/docs/concepts/tokens.html#token-accessors

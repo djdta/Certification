@@ -1,0 +1,1 @@
+https://learn.hashicorp.com/tutorials/vault/getting-started-deploy#seal-unseal

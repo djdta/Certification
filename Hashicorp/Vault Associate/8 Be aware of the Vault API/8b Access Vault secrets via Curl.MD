@@ -1,0 +1,1 @@
+https://www.vaultproject.io/api-docs/secret

@@ -1,0 +1,1 @@
+https://learn.hashicorp.com/collections/vault/secrets-management
