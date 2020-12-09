@@ -1,11 +1,19 @@
 # Infrastructure as Code
 
-
 #### <ins>Introduction</ins>
 
 Infrastructure­ as ­Code (IaC) is a type of IT infrastructure that operations teams can automatically manage and provision through code, rather than using a manual process. Infrastructure­ as ­Code is sometimes referred to as <ins><b>programmable infrastructure</ins></b>
 
 ---
+
+
+| Documentation | Tutorial
+| --------------- | -------------- |
+|[Infrastructure as code](https://www.terraform.io/intro/index.html#infrastructure-as-code) | [Introduction to Infrastructure as Code with Terraform](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code) 
+|[Infrastructure as Code in a Private or Public Cloud](https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud)
+
+
+
 
 Infrastructure as Code
 Infrastructure is described using a high-level configuration syntax. This allows a blueprint of your datacenter to be versioned and treated as you would any other code. Additionally, infrastructure can be shared and re-used.
@@ -35,23 +43,11 @@ I can begin to both automate that, but also now that I've captured it as a codif
 
 That really becomes the value. It's really the versioning of it, the <ins><b>reusability of the code</ins></b>, and the ability to then do automation on top of it.
 
-#### Infrastructure as Code in a Private or Public Cloud
-
-LARRY EICHENBAUM, AHMED BELGANA
-As technology advances, our tools change. But because most people resist change it often takes some type of failure—a system outage, a failed disaster recovery event, etc.—to get us to change our governance practices.
-
-For example, as companies move their operations to the cloud they tend to manage their cloud infrastructure the same way they managed their on-premise physical hardware, by logging into their virtual infrastructure’s web interface, or directly onto a system and applying changes via GUI or CLI. These users haven’t adopted the use of infrastructure as code (IaC) through the use of tools like HashiCorp Terraform.
-
-What is IaC? It is infrastructure <ins><b>(CPUs, memory, disk, firewalls, etc.)</ins></b> defined as code within definition files. But why change how we define and build infrastructure?
-
-Virtual compute enabled us to build and apply configuration changes to infrastructure via software commands. While these commands were often scripted, they were still hard for humans to read. More modern tools accepted code that was both human and machine readable, and provided additional benefits. They simplified code testing, could apply and track the changes between iterations, and most importantly they enabled teams to reuse components (e.g. modules) of code across different projects. It’s no wonder that IaC has developed such a significant following and adoption.
-
-
 ## Other Resources
 
 | Index |
 |:----------:|
 |[Infrastructure as code](https://en.wikipedia.org/w/index.php?title=Infrastructure_as_code&oldid=903249795)
 |[Infrastructure As Code Best Practices](https://stackify.com/what-is-infrastructure-as-code-how-it-works-best-practices-tutorials/)|
-|[Hashicorp Learning](https://learn.hashicorp.com/)|
+|[Hashicorp Learning](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code)|
 |[Amazon Whitepaper](https://www.amazon.co.uk/Infrastructure-as-Code-AWS-Whitepapers-ebook/dp/B074GGM4LK/ref=sr_1_17?crid=2O9RHCXFE7WEK&dchild=1&keywords=infrastructure+as+code&qid=1607365996&sprefix=Infras%2Caps%2C153&sr=8-17)|

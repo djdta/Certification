@@ -1,5 +1,10 @@
 # 1b Advantages of Infrasturcutre as Code Patterns
 
+| Documentation | Tutorial
+| --------------- | -------------- |
+|[Infrastructure as code Video](https://www.hashicorp.com/resources/what-is-infrastructure-as-code) | [Introduction to Infrastructure as Code with Terraform](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code) 
+|[Infrastructure as Code in a Private or Public Cloud](https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud)
+
 #### <ins>IaC and the Infrastructure Lifecycle</ins>
 
 So how does IaC fit into the infrastructure lifecycle? IaC can be applied throughout the lifecycle, both on the initial build, as well as throughout the life of the infrastructure. Commonly, these are referred to as Day 0 and Day 1 activities. “Day 0” code provisions and configures your initial infrastructure.
