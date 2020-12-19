@@ -9,21 +9,21 @@ assignees: ''
 
 ## Description:
 
-## Resources Requriements
+## Resources Requriements:
 - [x] Template Header
 - [x] Template Header
 - [x] Template Header
 - [x] Template Header
 
-## Tasks
+## Tasks:
 - [x] Template Header
 - [x] Template Header
 - [x] Template Header
 - [x] Template Header
 - [x] Template Header
 
-## Resources
+## Resources:
 First Header | Second Header
 ------------ | -------------
 
-## Outcome
+## Outcome:
