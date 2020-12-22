@@ -1,5 +1,5 @@
 ## 2B: Explain the Benefits of State
-TODO: #2 Please change the header to something to relfect this objective
+
 
 Purpose of Terraform State
 Jump to Section

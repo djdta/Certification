@@ -1,5 +1,4 @@
 ## 2a Explain multi-cloud and provider-agnostic benefits
-TODO: #1 Change the Name to reflect this sections
 
 * CloudFormation from AWS
 * Azure Resource Manager (ARM) Templates
