@@ -13,6 +13,7 @@
 * “Day 1” refers to OS and application configurations you apply after you’ve initially built your infrastructure. i.e Ansible, Chef and Puppet.
 * Standardizes workflows across different infrastructure providers (e.g., VMware, AWS, Azure, GCP, etc.).
 * IaC makes changes idempotent, consistent, repeatable, and predictable.
+* This allows a blueprint of your datacenter to be versioned and treated as you would any other code
 
 ## Other Resources
 
