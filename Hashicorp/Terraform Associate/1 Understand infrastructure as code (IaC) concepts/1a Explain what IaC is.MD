@@ -1,13 +1,18 @@
 # Infrastructure as Code
 
-* Managing infrastructure in a file or files
-* A resource in this instance is any piece of infrastructure in a given environment, such as a virtual machine, security group, network interface, etc
+* Managing infrastructure in a file or files.
+* A resource in this instance is any piece of infrastructure in a given environment, such as a virtual machine, security group, network interface, etc.
 * Easy Repeatable.
 * Easily Readable.
 * Opertional certaintly with terraform plan.
 * Standardized Environment builds.
-* Quickly provisoned development environment
-* Disaster Recovery
+* Quickly provisoned development environment.
+* Disaster Recovery.
+* If your managed your virtual infrastructure’s through web interface.  The users haven’t adopted the use of infrastructure as code (IaC) through the use of tools like HashiCorp Terraform.
+* “Day 0” code provisions and configures your initial infrastructure.
+* “Day 1” refers to OS and application configurations you apply after you’ve initially built your infrastructure. i.e Ansible, Chef and Puppet.
+* Standardizes workflows across different infrastructure providers (e.g., VMware, AWS, Azure, GCP, etc.).
+* IaC makes changes idempotent, consistent, repeatable, and predictable.
 
 ## Other Resources
 
