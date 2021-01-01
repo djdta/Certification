@@ -1,3 +1,5 @@
+## 9a Describe the benefits of Sentinel, registry, and workspaces
+
 https://www.terraform.io/docs/cloud/sentinel/index.html
 https://www.terraform.io/docs/cloud/registry/index.html
 https://www.terraform.io/docs/cloud/workspaces/index.html
