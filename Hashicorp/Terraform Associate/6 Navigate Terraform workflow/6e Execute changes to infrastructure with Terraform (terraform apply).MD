@@ -1,3 +1,5 @@
+## 6e Execute changes to infrastructure with Terraform (terraform apply)
+
 https://www.terraform.io/docs/commands/apply.html
 
 Create infrastructure
