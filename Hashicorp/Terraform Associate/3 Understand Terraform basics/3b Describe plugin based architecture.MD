@@ -1,3 +1,5 @@
+## 3b Describe plug-in based architecture
+
 https://learn.hashicorp.com/tutorials/terraform/aws-build#initialize-the-directory
 
 Initialize the directory
