@@ -5,6 +5,15 @@ provider "google" {
   region  = "us-central1"
 }
 
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "3.51.0"
+    }
+  }
+}
+
 # The default provider configuration; resources that begin with `aws_` will use
 # it as the default, and it can be referenced as `aws`.
 provider "aws" {
@@ -16,6 +25,15 @@ provider "aws" {
 provider "aws" {
   alias  = "west"
   region = "us-west-2"
+}
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 1.0.4"
+    }
+  }
 }
 
 # Able to reference a provider
@@ -30,5 +48,20 @@ module "aws_vpc" {
   source = "./aws_vpc"
   providers = {
     aws = aws.west
+  }
+}
+
+#### Azure Provider Details
+provider "azurerm" {
+  version = "=2.40.0"
+  features {}
+}
+
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "2.41.0"
+    }
   }
 }

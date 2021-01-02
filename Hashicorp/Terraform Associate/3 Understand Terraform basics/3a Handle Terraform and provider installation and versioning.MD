@@ -1,69 +1,9 @@
 ## 3a Handle Terraform and provider installation and versioning
 
-Here below is some explains of provider installations and versioning.
-
-#### Google Provider Example
+Please view the providers.tf file to view examples of how this can be used.
 
 
-``provider "google" {
-  project = "acme-app"
-  region  = "us-central1"
-}``
-
-``terraform {
-  required_providers {
-    google = {
-      source = "hashicorp/google"
-      version = "3.51.0"
-    }
-  }
-}``
-
-``provider "google" {
-}``
-
-
-#### AWS Example of Provider
-``provider "aws" {
-  region = "us-east-1"
-}``
-
-``terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 1.0.4"
-    }
-  }
-}``
-
-##### Additional provider configuration for west coast region; resources can
-##### reference this as `aws.west`.
-``provider "aws" {
-  alias  = "west"
-  region = "us-west-2"
-}``
-
-#### Azure Provider Details
-
-``terraform {
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "2.41.0"
-    }
-  }
-}``
-
-``provider "azurerm" {
-}``
-
-#### Configure the Azure Provider
-
-``provider "azurerm" {
-  version = "=2.40.0"
-  features {}
-}``
+Here below is some explains of versioning.
 
 ## Version Constraint Syntax
 
