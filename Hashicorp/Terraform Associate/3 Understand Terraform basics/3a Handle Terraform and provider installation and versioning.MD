@@ -3,7 +3,7 @@
 Please view the providers.tf file to view examples of how this can be used.
 
 
-Here below is some explains of versioning.
+Here below is some explains of versioning and please view the versioning.tf.
 
 ## Version Constraint Syntax
 
