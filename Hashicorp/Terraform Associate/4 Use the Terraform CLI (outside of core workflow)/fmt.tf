@@ -30,3 +30,4 @@ provider "aws" {
   profile                 = "customprofile"
 }
 
+# Example 3
