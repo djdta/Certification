@@ -7,7 +7,6 @@ When using a new module for the first time, you must run either terraform init o
 * Some input variables are required, meaning that the module doesn't provide a default value
 * Not all module input variables need to be set using variables in your configuration
 * Module outputs are usually either passed to other parts of your configuration
-* 
 
 #### Define root input variables
 Using input variables with modules is very similar to how you use variables in any Terraform configuration. A common pattern is to identify which module input variables you might want to change in the future, and create matching variables in your configuration's variables.tf file with sensible default values. Those variables can then be passed to the module block as arguments.
