@@ -29,5 +29,3 @@ provider "aws" {
   shared_credentials_file = "/Users/tf_user/.aws/creds"
   profile                 = "customprofile"
 }
-
-# Example 3
