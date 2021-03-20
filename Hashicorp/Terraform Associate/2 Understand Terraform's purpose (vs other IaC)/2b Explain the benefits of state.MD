@@ -14,8 +14,7 @@ As you'll see from the reasons below, state is required. And in the scenarios wh
 * Terraform checks any changes against the State.  Desired Configuration.
 * Terraform will refresh the state before each planning run.
 * Choosing not to refresh the state means that the reality of your infrastructure deployment may not match what is in the state file.  This can lead to inconsistent results when you apply the plan, or an outright failure. The risk of not refreshing state should be balanced against any performance improvements
-* State keeps track of the version of an applied configuration, and it supports the locking of state
-during updates.
+* State keeps track of the version of an applied configuration, and it supports the locking of state during updates.
 
 ## Key Notes
 Terraform state enables the mapping of real world instances to resources in
