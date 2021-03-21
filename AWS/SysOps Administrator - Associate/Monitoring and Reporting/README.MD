@@ -95,7 +95,7 @@ displays the following types of information about your resources:
 * Alarms provided by Amazon CloudWatch
 * Compliance information provided by AWS Config and Systems Manager State Manager
 
-AppConfig
+2.1 AppConfig
 
 Use AWS AppConfig, a capability of AWS Systems Manager, to create, manage, and quickly deploy
 application configurations. AWS AppConfig supports controlled deployments to applications of any size
@@ -104,7 +104,7 @@ hosted on EC2 instances, AWS Lambda, containers, mobile applications, or IoT dev
 Information about AWS AppConfig has been moved into a separate user guide. For more information,
 see What Is AWS AppConfig?
 
-Parameter Store
+2.2 Parameter Store
 
 AWS Systems Manager Parameter Store (Parameter Store) provides secure, hierarchical storage for
 configuration data management and secrets management. You can store data such as passwords,
@@ -409,8 +409,9 @@ specified AWS Region and account.
 }
 ```
 
-1The kms:GenerateDataKey permission is required for creating encrypted advanced parameters using
+The kms:GenerateDataKey permission is required for creating encrypted advanced parameters using
 the specified customer managed key.
+
 By contrast, all users within the customer account have access to the default AWS managed key. If
 you use this default key to encrypt SecureString parameters and do not want users to work with
 SecureString parameters, their IAM policies must explicitly deny access to the default key, as
@@ -446,9 +447,7 @@ Managing parameter tiers
 AWS Systems Manager Parameter Store (Parameter Store) includes standard parameters and advanced
 parameters. You individually configure parameters to use either the standard-parameter tier (the default
 tier) or the advanced-parameter tier.
-249
-AWS Systems Manager User Guide
-Setting up Parameter Store
+
 You can change a standard parameter to an advanced parameter at any time, but you can’t revert an
 advanced parameter to a standard parameter. Reverting an advanced parameter to a standard parameter
 would result in data loss because the system would truncate the size of the parameter from 8 KB to 4
@@ -473,11 +472,7 @@ parameter tier to use in the request. The following is an example, using the AWS
 Interface (AWS CLI).
 
 ```
-aws ssm put-parameter \
---name "default-ami" \
---type "String" \
---value "t2.micro" \
---tier "Standard"
+aws ssm put-parameter --name "default-ami" --type "String" --value "t2.micro" --tier "Standard"
 ```
 
 Whenever you specify a tier in the request, Parameter Store creates or updates the parameter according
@@ -486,9 +481,10 @@ tier setting determines which tier the parameter is created in.
 The default tier when you begin using Parameter Store is the standard-parameter tier. If you use the
 advanced-parameter tier, you can specify one of the following as the default:
 
-• Advanced: With this option, Parameter Store evaluates all requests as advanced parameters.
-• Intelligent-Tiering: With this option, Parameter Store evaluates each request to determine if the
+* Advanced: With this option, Parameter Store evaluates all requests as advanced parameters.
+* Intelligent-Tiering: With this option, Parameter Store evaluates each request to determine if the
 parameter is standard or advanced.
+
 If the request doesn't include any options that require an advanced parameter, the parameter is
 created in the standard-parameter tier. If one or more options requiring an advanced parameter are
 included in the request, Parameter Store creates a parameter in the advanced-parameter tier.
@@ -534,10 +530,474 @@ standard parameter for requests that don't specify a tier.
 
 * Advanced – The advanced-parameter tier lets you create a maximum of 100,000 parameters for
 each Region in an AWS account. The content size of each parameter can equal a maximum of 8 KB.
-Advanced parameters support parameter policies. There is a charge to use the advanced-parameter
-tier. For more information, see AWS Systems Manager Pricing. Choosing Advanced as the default tier
-means that Parameter Store always attempts to create an advanced parameter for requests that don't
-specify a tier.
+Advanced parameters support parameter policies.
+
+Intelligent-Tiering – The Intelligent-Tiering option lets Parameter Store determine whether to use the
+standard-parameter tier or advanced-parameter tier based on the content of the request. For example,
+if you run a command to create a parameter with content under 4 KB, and there are fewer than 10,000
+parameters in the current Region in your AWS account, and you do not specify a parameter policy, a
+standard parameter is created. If you run a command to create a parameter with more than 4 KB of
+content, you already have more than 10,000 parameters in the current Region in your AWS account, or
+you specify a parameter policy, an advanced parameter is created.
+
+You can change the Parameter Store default tier setting at any time.
+
+Configuring permissions to specify a Parameter Store default tier
+
+Verify that you have permission in AWS Identity and Access Management (IAM) to change the default
+parameter tier in Parameter Store by doing one of the following:
+
+* Ensure that the AdministratorAccess policy is attached to your IAM user, group, or role.
+* Ensure that you have permission to change the default tier setting by using the following API actions:
+* GetServiceSetting
+* UpdateServiceSetting
+* ResetServiceSetting
+
+Use the following procedure to add an inline IAM policy to a user account.
+
+Example below
+
+```
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Effect": "Allow",
+    "Action": [
+        "ssm:GetServiceSetting"
+],
+    "Resource": "*"
+    },
+{
+"Effect": "Allow",
+    "Action": [
+        "ssm:UpdateServiceSetting"
+],
+    "Resource": "arn:aws:ssm:region:account-id:servicesetting/ssm/parameterstore/default-parameter-tier"
+        }
+    ]
+}
+```
+
+```
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+    "Effect": "Allow",
+        "Action": [
+            "ssm:GetServiceSetting"
+    ],
+        "Resource": "*"
+    },
+{
+"Effect": "Deny",
+    "Action": [
+        "ssm:ResetServiceSetting",
+            "ssm:UpdateServiceSetting"
+    ],
+        "Resource": "*"
+        }
+    ]
+}
+```
+
+Specifying or changing the Parameter Store default tier (console)
+
+The following procedure shows how to use the Systems Manager console to specify or change the
+default parameter tier for the current AWS account and Region.
+Tip
+If you haven't created a parameter yet, you can use the AWS Command Line Interface (AWS
+CLI) or AWS Tools for Windows PowerShell (Tools for Windows PowerShell) to change the
+default parameter tier. 
+
+To specify or change the Parameter Store default tier
+1. Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/.
+2. In the navigation pane, choose Parameter Store.
+-or-
+If the AWS Systems Manager home page opens first, choose the menu icon ( ) to open the
+navigation pane, and then choose Parameter Store.
+3. Choose the Settings tab.
+4. Choose Change default tier.
+5. Choose one of the following options.
+* Standard
+* Advanced
+* Intelligent-Tiering
+
+6. Review the message, and choose Confirm.
+If you want to change the default tier setting later, repeat this procedure and specify a different default
+tier option.
+
+Specifying or changing the Parameter Store default tier (AWS CLI)
+
+The following procedure shows how to use the AWS CLI to change the default parameter tier setting for
+the current AWS account and Region.
+To specify or change the Parameter Store default tier using the AWS CLI
+
+1. Open the AWS CLI and run the following command to change the default parameter tier setting for
+a specific Region in an AWS account.
+
+```
+aws ssm update-service-setting --setting-id arn:aws:ssm:region:accountid:
+servicesetting/ssm/parameter-store/default-parameter-tier --setting-value tieroption
+```
+region represents the identifier for an AWS Region supported by AWS Systems Manager, such as
+us-east-2 for the US East (Ohio) Region.
+
+There is no output if the command succeeds.
+2. Run the following command to view the current throughput service settings for Parameter Store in
+the current AWS account and Region.
+
+```
+aws ssm get-service-setting --setting-id arn:aws:ssm:region:account-id:servicesetting/
+ssm/parameter-store/default-parameter-tier
+```
+The system returns information similar to the following.
+
+```
+{
+"ServiceSetting": {
+"SettingId": "/ssm/parameter-store/default-parameter-tier",
+"SettingValue": "Advanced",
+"LastModifiedDate": 1556551683.923,
+"LastModifiedUser": "arn:aws:sts::123456789012:assumed-role/Administrator/
+Jasper",
+"ARN": "arn:aws:ssm:us-east-2:123456789012:servicesetting/ssm/parameter-store/
+default-parameter-tier",
+"Status": "Customized"
+}
+}
+```
+If you want to change the default tier setting again, repeat this procedure and specify a different
+SettingValue option.
+
+Specifying or changing the Parameter Store default tier (PowerShell)
+
+The following procedure shows how to use the Tools for Windows PowerShell to change the default
+parameter tier setting for a specific Region in an AWS account.
+
+To specify or change the Parameter Store default tier using PowerShell
+1. Change the Parameter Store default tier in the current AWS account and Region using the AWS Tools
+for PowerShell (Tools for PowerShell).
+
+```
+Update-SSMServiceSetting -SettingId "arn:aws:ssm:region:account-id:servicesetting/ssm/
+parameter-store/default-parameter-tier" -SettingValue "tier-option" -Region region
+```
+
+region represents the identifier for an AWS Region supported by AWS Systems Manager, such as
+us-east-2 for the US East (Ohio) Region.
+
+tier-option values include Standard, Advanced, and Intelligent-Tiering.
+
+There is no output if the command succeeds.
+2. Run the following command to view the current throughput service settings for Parameter Store in
+the current AWS account and Region.
+
+```
+Get-SSMServiceSetting -SettingId "arn:aws:ssm:region:account-id:servicesetting/ssm/
+parameter-store/default-parameter-tier" -Region region
+```
+
+region represents the identifier for an AWS Region supported by AWS Systems Manager, such as
+us-east-2 for the US East (Ohio) Region.
+
+The system returns information similar to the following.
+
+```
+ARN : arn:aws:ssm:us-east-2:123456789012:servicesetting/ssm/parameterstore/
+default-parameter-tier
+LastModifiedDate : 4/29/2019 3:35:44 PM
+LastModifiedUser : arn:aws:sts::123456789012:assumed-role/Administrator/Jasper
+SettingId : /ssm/parameter-store/default-parameter-tier
+SettingValue : Advanced
+Status : Customized
+```
+If you want to change the default tier setting again, repeat this procedure and specify a different
+SettingValue option.
+
+Configuring permissions to increase Parameter Store throughput
+
+Verify that you have permission in IAM to increase Parameter Store throughput by doing one of the
+following:
+
+* Ensure that the AdministratorAccess policy is attached to your IAM user, group, or role.
+* Ensure that you have permission to change the throughput service setting by using the following API
+actions:
+* GetServiceSetting
+* UpdateServiceSetting
+* ResetServiceSetting
+Use the following procedure to add an inline IAM policy to a user account. This policy enables a user to
+view and change the parameter-throughput setting for parameters in their account and Region.
+
+Example code
+
+```
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Effect": "Allow",
+    "Action": [
+        "ssm:GetServiceSetting"
+    ],
+        "Resource": "*"
+        },
+    {
+"Effect": "Allow",
+    "Action": [
+        "ssm:UpdateServiceSetting"
+    ],
+        "Resource": "arn:aws:ssm:region:account-id:servicesetting/ssm/parameterstore/high-throughput-enabled"
+        }
+    ]
+}
+```
+Administrators can specify read-only permission by assigning the following inline policy to the user's
+account.
+
+```
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Effect": "Allow",
+    "Action": [
+        "ssm:GetServiceSetting"
+    ],
+        "Resource": "*"
+    },
+{
+"Effect": "Deny",
+    "Action": [
+        "ssm:ResetServiceSetting",
+        "ssm:UpdateServiceSetting"
+    ],
+        "Resource": "*"
+        }
+    ]
+}
+```
+Increasing throughput (AWS CLI)
+
+The following procedure shows how to use the AWS CLI to increase the number of transactions per
+second that Parameter Store can process for the current AWS account and Region.
+
+1. Open the AWS CLI and run the following command to increase the transactions per second that
+Parameter Store can process in the current AWS account and Region.
+
+```
+aws ssm update-service-setting --setting-id arn:aws:ssm:region:accountid:
+servicesetting/ssm/parameter-store/high-throughput-enabled --setting-value true
+```
+There is no output if the command succeeds.
+
+2. Run the following command to view the current throughput service settings for Parameter Store in
+the current AWS account and Region.
+
+```
+aws ssm get-service-setting --setting-id arn:aws:ssm:region:account-id:servicesetting/
+ssm/parameter-store/high-throughput-enabled
+```
+
+```
+{
+"ServiceSetting": {
+"SettingId": "/ssm/parameter-store/high-throughput-enabled",
+"SettingValue": "true",
+"LastModifiedDate": 1556551683.923,
+"LastModifiedUser": "arn:aws:sts::123456789012:assumed-role/Administrator/Jasper",
+    "ARN": "arn:aws:ssm:us-east-2:123456789012:servicesetting/ssm/parameter-store/high-throughput-enabled",
+    "Status": "Customized"
+    }
+}
+```
+If you no longer need increased throughput, or if you no longer want to incur charges, you can revert to
+the standard settings. To revert your settings, run the following command.
+
+```
+aws ssm reset-service-setting --setting-id arn:aws:ssm:region:account-id:servicesetting/
+ssm/parameter-store/high-throughput-enabled
+```
+
+```
+{
+"ServiceSetting": {
+"SettingId": "/ssm/parameter-store/high-throughput-enabled",
+"SettingValue": "false",
+"LastModifiedDate": 1555532818.578,
+"LastModifiedUser": "System",
+"ARN": "arn:aws:ssm:us-east-2:123456789012:servicesetting/ssm/parameter-store/highthroughput-enabled",
+    "Status": "Default"
+    }
+}
+```
+
+Increasing throughput (PowerShell)
+
+1. Increase Parameter Store throughput in the current AWS account and Region using the AWS Tools
+for PowerShell (Tools for PowerShell).
+```
+Update-SSMServiceSetting -SettingId "arn:aws:ssm:region:account-id:servicesetting/ssm/
+parameter-store/high-throughput-enabled" -SettingValue "true" -Region us-east-2
+```
+
+There is no output if the command succeeds.
+
+2. Run the following command to view the current throughput service settings for Parameter Store in
+the current AWS account and Region.
+
+```
+Get-SSMServiceSetting -SettingId "arn:aws:ssm:region:account-id:servicesetting/ssm/
+parameter-store/high-throughput-enabled" -Region us-east-2
+```
+```
+ARN : arn:aws:ssm:us-east-2:123456789012:servicesetting/ssm/parameterstore/
+high-throughput-enabled
+LastModifiedDate : 4/29/2019 3:35:44 PM
+LastModifiedUser : arn:aws:sts::123456789012:assumed-role/Administrator/Jasper
+SettingId : /ssm/parameter-store/high-throughput-enabled
+SettingValue : true
+Status : Customized
+```
+
+If you no longer need increased throughput, or if you no longer want to incur charges, you can revert to
+the standard settings. To revert your settings, run the following command.
+```
+Reset-SSMServiceSetting -SettingId "arn:aws:ssm:region:account-id:servicesetting/ssm/
+parameter-store/high-throughput-enabled" -Region region
+```
+```
+ARN : arn:aws:ssm:us-east-2:123456789012:servicesetting/ssm/parameter-store/
+high-throughput-enabled
+LastModifiedDate : 4/17/2019 8:26:58 PM
+LastModifiedUser : System
+SettingId : /ssm/parameter-store/high-throughput-enabled
+SettingValue : false
+Status : Default
+```
+
+Setting up notifications or trigger actions based on Paramete Store events
+
+The topics in this section explain how to use Amazon EventBridge (EventBridge) and Amazon Simple
+Notification Service (Amazon SNS) to notify you about changes to AWS Systems Manager parameters.
+You can create an EventBridge rule to notify you when a parameter or a parameter label version is
+created, updated, or deleted. Events are emitted on a best effort basis. You can be notified about
+changes or status related to parameter policies, such as when a parameter expires, is going to expire, or
+hasn't changed for a specified period of time.
+
+The topics below also explain how to trigger other actions on a target for specific parameter events. For
+example, you can run an AWS Lambda (Lambda) function to recreate a parameter automatically when
+it expires or is deleted. You can set up a notification to trigger a Lambda function when your database
+password is updated. The Lambda function can force your database connections to reset or reconnect
+with the new password. EventBridge also supports running AWS Systems Manager Run Command (Run
+Command) commands and AWS Systems Manager Automations (Automation) executions, and actions in
+many other AWS services. For more information, see the Amazon EventBridge User Guide.
+
+Event pattern
+
+```
+{
+"source": [
+"aws.ssm"
+],
+"detail-type": [
+"Parameter Store Change"
+],
+"detail": {
+"name": [
+"parameter-1-name",
+"/parameter-2-name/level-2",
+"/parameter-3-name/level-2/level-3"
+],
+"operation": [
+"Create",
+"Update",
+"Delete",
+"LabelParameterVersion"
+]
+}
+}
+```
+
+```
+{
+"source": [
+"aws.ssm"
+],
+"detail-type": [
+"Parameter Store Change"
+],
+"detail": {
+"name": [
+"/Oncall",
+"/Project/Teamlead"
+],
+"operation": [
+"Update"
+]
+}
+}
+```
+
+Configuring EventBridge for parameter policies
+This topic explains how to create EventBridge rules that invoke targets based on events that happen
+to one or more parameter policies in your AWS account. When you create an advanced parameter, you
+specify when a parameter expires, when to receive notification before a parameter expires, and how
+long to wait before notification should be sent that a parameter hasn't changed. You set up notification
+for these events using the following procedure.
+
+Example below
+
+```
+{
+"source": [
+"aws.ssm"
+],
+"detail-type": [
+"Parameter Store Policy Action"
+],
+"detail": {
+"parameter-name": [
+"parameter-1-name",
+"/parameter-2-name/level-2",
+"/parameter-3-name/level-2/level-3"
+],
+"policy-type": [
+"Expiration",
+"ExpirationNotification",
+"NoChangeNotification"
+]
+}
+}
+```
+
+Example 2 but maybe connect to above
+
+```
+{
+"source": [
+"aws.ssm"
+],
+"detail-type": [
+"Parameter Store Policy Action"
+],
+"detail": {
+"parameter-name": [
+"/OncallDuties"
+],
+262
+AWS Systems Manager User Guide
+Working with Parameter Store
+"policy-type": [
+"Expiration"
+]
+}
+}
+```
+
+
+
 
 ## Change Management
 Change Manager
