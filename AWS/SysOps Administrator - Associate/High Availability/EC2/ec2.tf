@@ -1,4 +1,48 @@
+# With Latest Version Of Launch Template
+resource "aws_launch_template" "foobar" {
+  name_prefix   = "foobar"
+  image_id      = "ami-1a2b3c"
+  instance_type = "t2.micro"
+}
+
 resource "aws_autoscaling_group" "bar" {
+  availability_zones = ["us-east-1a"]
+  desired_capacity   = 1
+  max_size           = 1
+  min_size           = 1
+
+  launch_template {
+    id      = aws_launch_template.foobar.id
+    version = "$Latest"
+  }
+}
+
+resource "aws_autoscaling_group" "example" {
+  availability_zones = ["us-east-1a"]
+  desired_capacity   = 1
+  max_size           = 1
+  min_size           = 1
+
+  mixed_instances_policy {
+    launch_template {
+      launch_template_specification {
+        launch_template_id = aws_launch_template.example.id
+      }
+
+      override {
+        instance_type     = "c4.large"
+        weighted_capacity = "3"
+      }
+
+      override {
+        instance_type     = "c3.large"
+        weighted_capacity = "2"
+      }
+    }
+  }
+}
+
+/*resource "aws_autoscaling_group" "bar" {
   name                      = "foobar3-terraform-test"
   max_size                  = 5
   min_size                  = 2
@@ -43,49 +87,7 @@ EOF
   }
 }
 
-# With Latest Version Of Launch Template
-resource "aws_launch_template" "foobar" {
-  name_prefix   = "foobar"
-  image_id      = "ami-1a2b3c"
-  instance_type = "t2.micro"
-}
 
-resource "aws_autoscaling_group" "bar" {
-  availability_zones = ["us-east-1a"]
-  desired_capacity   = 1
-  max_size           = 1
-  min_size           = 1
-
-  launch_template {
-    id      = aws_launch_template.foobar.id
-    version = "$Latest"
-  }
-}
-
-resource "aws_autoscaling_group" "example" {
-  availability_zones = ["us-east-1a"]
-  desired_capacity   = 1
-  max_size           = 1
-  min_size           = 1
-
-  mixed_instances_policy {
-    launch_template {
-      launch_template_specification {
-        launch_template_id = aws_launch_template.example.id
-      }
-
-      override {
-        instance_type     = "c4.large"
-        weighted_capacity = "3"
-      }
-
-      override {
-        instance_type     = "c3.large"
-        weighted_capacity = "2"
-      }
-    }
-  }
-}
 
 # Mixed Instances Policy with Spot Instances and Capacity Rebalance
 resource "aws_launch_template" "example" {
