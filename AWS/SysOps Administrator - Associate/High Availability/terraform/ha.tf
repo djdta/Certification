@@ -4,6 +4,7 @@ resource "aws_autoscaling_attachment" "asg_attachment_bar" {
   autoscaling_group_name = aws_autoscaling_group.asg.id
   elb                    = aws_elb.bar.id
 }
+
 # Create a new ALB Target Group attachment
 resource "aws_autoscaling_attachment" "asg_attachment_bar" {
   autoscaling_group_name = aws_autoscaling_group.asg.id
@@ -28,7 +29,7 @@ resource "aws_placement_group" "test" {
   strategy = "cluster"
 }
 
-Mixed Instances Policy
+# Mixed Instances Policy
 resource "aws_launch_template" "example" {
   name_prefix   = "example"
   image_id      = data.aws_ami.example.id

@@ -43,7 +43,7 @@ EOF
   }
 }
 
-With Latest Version Of Launch Template
+# With Latest Version Of Launch Template
 resource "aws_launch_template" "foobar" {
   name_prefix   = "foobar"
   image_id      = "ami-1a2b3c"
@@ -87,7 +87,7 @@ resource "aws_autoscaling_group" "example" {
   }
 }
 
-Mixed Instances Policy with Spot Instances and Capacity Rebalance
+# Mixed Instances Policy with Spot Instances and Capacity Rebalance
 resource "aws_launch_template" "example" {
   name_prefix   = "example"
   image_id      = data.aws_ami.example.id
@@ -183,7 +183,7 @@ resource "aws_autoscaling_group" "bar" {
   )
 }
 
-Automatically refresh all instances after the group is updated
+# Automatically refresh all instances after the group is updated
 resource "aws_autoscaling_group" "example" {
   availability_zones = ["us-east-1a"]
   desired_capacity   = 1

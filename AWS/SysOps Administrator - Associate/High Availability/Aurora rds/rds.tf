@@ -1,4 +1,4 @@
-Preserve desired count when updating an autoscaled ECS Service
+# Preserve desired count when updating an autoscaled ECS Service
 resource "aws_ecs_service" "ecs_service" {
   name            = "serviceName"
   cluster         = "clusterName"
@@ -10,7 +10,7 @@ resource "aws_ecs_service" "ecs_service" {
   }
 }
 
-Aurora Read Replica Autoscaling
+# Aurora Read Replica Autoscaling
 resource "aws_appautoscaling_target" "replicas" {
   service_namespace  = "rds"
   scalable_dimension = "rds:cluster:ReadReplicaCount"
