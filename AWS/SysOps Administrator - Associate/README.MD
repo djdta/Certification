@@ -6,8 +6,11 @@ This readme contains details around the exam, information around the exam and th
 <br>
 <br>
 
-## Exam Details
+### Exam Details
 ---
+
+<br>
+
 
 | Assessment Type     | Multiple choice
 | ------------------- | -------------- |
@@ -20,7 +23,6 @@ This readme contains details around the exam, information around the exam and th
 | Number of Questions | 65
 | Passing Score       | 720 / 1000
 
-<br>
 <br>
 <br>
 
