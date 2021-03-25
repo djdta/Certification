@@ -1,3 +1,3 @@
 provider "aws" {
-  region = "" #TODO:// Added region details
+  region = "eu-west-2"
 }
