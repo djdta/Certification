@@ -4,7 +4,7 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-*.terraform.lock.hcl.*
+*.terraform.lock.hcl*
 
 # Crash log files
 crash.log
@@ -29,4 +29,4 @@ override.tf.json
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
 workspace.code-workspace
-AWS/SysOps Administrator - Associate/High Availability/EC2/.terraform.lock.hcl
+
