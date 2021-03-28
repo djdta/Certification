@@ -1,8 +1,30 @@
 # ECS Service Autoscaling
+
+resource "aws_ecs_cluster" "foo" {
+  name = "white-hart"
+}
+
+resource "aws_ecs_service" "mongo" {
+  name            = "mongodb"
+  task_definition = "mongodb"
+  cluster         = aws_ecs_cluster.foo.id
+  desired_count   = 3
+
+  ordered_placement_strategy {
+    type  = "binpack"
+    field = "cpu"
+  }
+
+  placement_constraints {
+    type       = "memberOf"
+    expression = "attribute:ecs.availability-zone in [us-west-2a, us-west-2b]"
+  }
+}
+
 resource "aws_appautoscaling_target" "ecs_target" {
   max_capacity       = 4
   min_capacity       = 1
-  resource_id        = "service/clusterName/serviceName"
+  resource_id        = "service/clusterName/white-hart"
   scalable_dimension = "ecs:service:DesiredCount"
   service_namespace  = "ecs"
 }
@@ -24,21 +46,5 @@ resource "aws_appautoscaling_policy" "ecs_policy" {
       scaling_adjustment          = -1
     }
   }
-}
-
-resource "aws_appautoscaling_target" "ecs_target" {
-  max_capacity       = 4
-  min_capacity       = 1
-  resource_id        = "service/${aws_ecs_cluster.example.name}/${aws_ecs_service.example.name}"
-  scalable_dimension = "ecs:service:DesiredCount"
-  service_namespace  = "ecs"
-}
-
-resource "aws_appautoscaling_target" "replicas" {
-  service_namespace  = "rds"
-  scalable_dimension = "rds:cluster:ReadReplicaCount"
-  resource_id        = "cluster:${aws_rds_cluster.example.id}"
-  min_capacity       = 1
-  max_capacity       = 15
 }
 

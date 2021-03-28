@@ -1,22 +1,22 @@
-# Preserve desired count when updating an autoscaled ECS Service
-resource "aws_ecs_service" "ecs_service" {
-  name            = "serviceName"
-  cluster         = "clusterName"
-  task_definition = "taskDefinitionFamily:1"
-  desired_count   = 2
-
-  lifecycle {
-    ignore_changes = [desired_count]
-  }
+# Aurora Read Replica Autoscaling
+resource "aws_rds_cluster" "example" {
+  cluster_identifier      = "aurora-cluster-demo"
+  engine                  = "aurora-postgresql"
+  availability_zones      = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
+  database_name           = "mydb"
+  master_username         = "admin_foo"
+  master_password         = "admin_bar"
+  backup_retention_period = 5
+  preferred_backup_window = "07:00-09:00"
+  skip_final_snapshot     = true
 }
 
-# Aurora Read Replica Autoscaling
 resource "aws_appautoscaling_target" "replicas" {
   service_namespace  = "rds"
   scalable_dimension = "rds:cluster:ReadReplicaCount"
   resource_id        = "cluster:${aws_rds_cluster.example.id}"
   min_capacity       = 1
-  max_capacity       = 15
+  max_capacity       = 3
 }
 
 resource "aws_appautoscaling_policy" "replicas" {
