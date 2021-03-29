@@ -139,6 +139,7 @@ Application
 ## Network Load Balancer
 
 * Layer 4 TCP Traffic
+* cross zone load balancing (but must be enabled)
 * Supports Millions
 * High Throughput / Low Latency
 * Preserve Source IP
