@@ -136,7 +136,6 @@ Application
 * cross zone load balancing
 * Elastic load balancer is a regional service.
 
-
 ## Network Load Balancer
 
 * Layer 4 TCP Traffic
