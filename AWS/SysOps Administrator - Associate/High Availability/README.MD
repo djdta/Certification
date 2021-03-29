@@ -122,5 +122,35 @@ For use of the auto scaling, the default should be used which is target tracking
 
 Serverless mode of the auto scaling this would automanictly scale base on the capcity needs and change it when need.
 
+## Load Balancer
 
+Application
+* Layer 7 load balancing HTTP / HTTPS
+* Server Name Indication
+* IP Address as targets
+* Lamda Functions as targets
+* Host / Path based routing
+* Containerzied application support
+* Sticky sessions support (Maintain client connection to the server)
+* Secuirty user authentication and WAF
+* cross zone load balancing
+* Elastic load balancer is a regional service.
+
+
+## Network Load Balancer
+
+* Layer 4 TCP Traffic
+* Supports Millions
+* High Throughput / Low Latency
+* Preserve Source IP
+* Static / Elastic IP support
+
+## Classic Load Balancer
+
+* Legacy solution (EC"-Classic network)
+* Not recommended for VPC
+* High availability
+* SSL Offloading
+* Sticky sessions
+* Layer 4 and Layer 7 load balancing
 
