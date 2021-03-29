@@ -145,9 +145,9 @@ Application
 * Preserve Source IP
 * Static / Elastic IP support
 
-## Classic Load Balancer
+## Classic Load Balancer (Legancy)
 
-* Legacy solution (EC"-Classic network)
+* Legacy solution (EC2-Classic network)
 * Not recommended for VPC
 * High availability
 * SSL Offloading
