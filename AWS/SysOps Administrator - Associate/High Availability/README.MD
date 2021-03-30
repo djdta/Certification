@@ -22,7 +22,7 @@ For High Availiablity auto scaling are used for different resources from ec2 mac
 * Application Auto Scaling
 
 ### Vertical Scaling
----
+
 
 Vertical Scaling this is used for more performance driven task.  A list below are a few examples as to way this would be need.  Also using this type of scaling to increase cost
 
@@ -40,7 +40,7 @@ Descaling **m5.large ===================> t2.mirco**
 
 
 ## Horizontal Scaling
----
+
 
 Horizontal Scaling is different in the way it works around scaling resources in your aws accounts.  This works in a fashion of setup an nginx asg group with ec2 instances and what will happen is that base off proformance it will scale accross the same instances never increase tiers, but will still increase cost as this will be running 2 instances instead of one.  Below is a example of how it works.
 
@@ -54,7 +54,7 @@ Also there is a terraform code in this repo which you can use.
 
 
 ## Launch Config
----
+
 
 With the launch config you can set the <b>launch config</b> for the auto scaling is going to work.  Below there is a list of pros and cons to this and something to be aware for the exam.
 
@@ -77,7 +77,7 @@ In order for making sure that auto scaling and auto scal plans are working to ho
 `stress test tool`
 
 ## Application Auto Scaling
----
+
 
 With application auto scaling as is base around the following elements 
 
@@ -88,7 +88,7 @@ With application auto scaling as is base around the following elements
 The above and based aws resources which can be used to do application auto scale and create auto scale plans also along with this you do you have ablilty with the cloudwatch logs to help the auto scale decide to scale it performance has been maxed out.
 
 ## AWS Auto Scaling
----
+
 
 With the Auto Scaling this is designed for creating and maintain scale plans.  For use of this would a couple of thing to consider and they are list in points below
 
