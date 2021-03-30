@@ -168,3 +168,35 @@ Example terraform code is the Load Balancer folder for view. To deploy the load 
 
 <b> Classic_Load_Balancer = true </b>
 
+## Usage of Terraform Code
+
+Just for any one who will use the terraform code for studying.  The following need to be defined before you use the terraform code that i have provided your.
+
+```
+variable "vpc_id" {
+  description = "This for your vpc id"
+  type        = string
+  default     = ""
+}
+```
+```
+variable "subnet1" {
+  description = "This for your first subnet"
+  type        = string
+  default     = ""
+}
+```
+```
+variable "subnet2" {
+  description = "This for your second subnet"
+  type        = string
+  default     = ""
+}
+```
+```
+variable "subnet3" {
+  description = "This for your third subnet"
+  type        = string
+  default     = ""
+}
+```
