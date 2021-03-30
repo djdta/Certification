@@ -136,6 +136,11 @@ Application
 * cross zone load balancing
 * Elastic load balancer is a regional service.
 
+Example terraform code is the Load Balancer folder for view. To deploy the load balancer make sure the flag is set before running
+
+<b> Application_Load_Balancer = true </b>
+
+
 ## Network Load Balancer
 
 * Layer 4 TCP Traffic
@@ -145,6 +150,11 @@ Application
 * Preserve Source IP
 * Static / Elastic IP support
 
+Example terraform code is the Load Balancer folder for view. 
+To deploy the load balancer make sure the flag is set before running
+
+<b> Network_Load_Balancer = true </b>
+
 ## Classic Load Balancer (Legancy)
 
 * Legacy solution (EC2-Classic network)
@@ -153,4 +163,8 @@ Application
 * SSL Offloading
 * Sticky sessions
 * Layer 4 and Layer 7 load balancing
+
+Example terraform code is the Load Balancer folder for view. To deploy the load balancer make sure the flag is set before running
+
+<b> Classic_Load_Balancer = true </b>
 
