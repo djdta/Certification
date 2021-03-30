@@ -179,6 +179,7 @@ variable "vpc_id" {
   default     = ""
 }
 ```
+
 ```
 variable "subnet1" {
   description = "This for your first subnet"
@@ -186,6 +187,7 @@ variable "subnet1" {
   default     = ""
 }
 ```
+
 ```
 variable "subnet2" {
   description = "This for your second subnet"
@@ -193,6 +195,7 @@ variable "subnet2" {
   default     = ""
 }
 ```
+
 ```
 variable "subnet3" {
   description = "This for your third subnet"
