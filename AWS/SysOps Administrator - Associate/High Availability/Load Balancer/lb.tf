@@ -19,7 +19,6 @@ resource "aws_lb" "test" {
   name               = "ALB-01"
   internal           = false
   load_balancer_type = "application"
-  # security_groups    = [data.aws_security_group.lb.id]
   subnets = [data.aws_subnet.example1.id, data.aws_subnet.example2.id, data.aws_subnet.example3.id]
 
   enable_deletion_protection = false
