@@ -3,9 +3,9 @@ resource "aws_rds_cluster" "example" {
   cluster_identifier      = "aurora-cluster-demo"
   engine                  = "aurora-postgresql"
   availability_zones      = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
-  database_name           = "mydb"
-  master_username         = "admin_foo"
-  master_password         = "admin_bar"
+  database_name           = ""
+  master_username         = ""
+  master_password         = ""
   backup_retention_period = 5
   preferred_backup_window = "07:00-09:00"
   skip_final_snapshot     = true
