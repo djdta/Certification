@@ -119,5 +119,7 @@ On Terraform Enterprise versions v202005-1 or later, administrators can allow sp
 |Gold|||   ✔️  |  ✔️  |
 
 https://www.terraform.io/docs/cloud/index.html
+
 https://www.terraform.io/docs/cloud/run/ui.html
+
 https://www.hashicorp.com/products/terraform/pricing
