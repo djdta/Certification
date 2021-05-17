@@ -1,4 +1,4 @@
-## 6a Describe Terraform workflow ( Write -> Plan -> Create )
+# 6a Describe Terraform workflow ( Write -> Plan -> Create )
 
 ## Summary
 
@@ -13,6 +13,7 @@ Apply - Provision reproducible infrastructure.
 This guide walks through how each of these three steps plays out in the context of working as an individual practitioner, how they evolve when a team is collaborating on infrastructure, and how Terraform Cloud enables this workflow to run smoothly for entire organizations.
 
 ## Write
+
 You write Terraform configuration just like you write code: in your editor of choice. It's common practice to store your work in a version controlled repository even when you're just operating as an individual.
 
 ```
@@ -48,6 +49,7 @@ $ vim main.tf
 This parallels working on application code as an individual, where a tight feedback loop between editing code and running test commands is useful.
 
 ## Plan
+
 When the feedback loop of the Write step has yielded a change that looks good, it's time to commit your work and review the final plan.
 
 ```
@@ -68,6 +70,7 @@ An execution plan has been generated and is shown below.
 ```
 
 ## Apply
+
 After one last check, you are ready to tell Terraform to provision real infrastructure.
 
 ```

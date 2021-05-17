@@ -1,6 +1,7 @@
-## 6d Generate and review an execution plan for Terraform (terraform plan)
+# 6d Generate and review an execution plan for Terraform (terraform plan)
 
 ## Summary
+
 The terraform plan command is used to create an execution plan. Terraform performs a refresh, unless explicitly disabled, and then determines what actions are necessary to achieve the desired state specified in the configuration files.
 
 This command is a convenient way to check whether the execution plan for a set of changes matches your expectations without making any changes to real resources or to the state. For example, terraform plan might be run before committing a change to version control, to create confidence that it will behave as expected.
@@ -10,6 +11,7 @@ The optional -out argument can be used to save the generated plan to a file for 
 If Terraform detects no changes to resource or to root module output values, terraform plan will indicate that no changes are required.
 
 ## Usage
+
 Usage: terraform plan [options]
 
 The plan subcommand looks in the current working directory for the root module configuration.
@@ -48,6 +50,7 @@ The available options are:
 * -var-file=foo - Set variables in the Terraform configuration from a variable file. If a terraform.tfvars or any .auto.tfvars files are present in the current directory, they will be automatically loaded. terraform.tfvars is loaded first and the .auto.tfvars files after in alphabetical order. Any files specified by -var-file override any values set automatically from files in the working directory. This flag can be used multiple times.
 
 ## Resource Targeting
+
 The -target option can be used to focus Terraform's attention on only a subset of resources. Resource Address syntax is used to specify the constraint. The resource address is interpreted as follows:
 
 If the given address has a resource spec, only the specified resource is targeted. If the named resource uses count and no explicit index is specified in the address (i.e. aws_instance.example[3]), all of the instances sharing the given resource name are targeted.
@@ -59,6 +62,7 @@ This targeting capability is provided for exceptional circumstances, such as rec
 Instead of using -target as a means to operate on isolated portions of very large configurations, prefer instead to break large configurations into several smaller configurations that can each be independently applied. Data sources can be used to access information about resources created in other configurations, allowing a complex system architecture to be broken down into more manageable parts that can be updated independently.
 
 ## Security Warning
+
 Saved plan files (with the -out flag) encode the configuration, state, diff, and variables. Variables are often used to store secrets. Therefore, the plan file can potentially store secrets.
 
 Terraform itself does not encrypt the plan file. It is highly recommended to encrypt the plan file if you intend to transfer it or keep it at rest for an extended period of time.
@@ -66,6 +70,7 @@ Terraform itself does not encrypt the plan file. It is highly recommended to enc
 Future versions of Terraform will make plan files more secure.
 
 ## Passing a Different Configuration Directory
+
 Terraform v0.13 and earlier accepted an additional positional argument giving a directory path, in which case Terraform would use that directory as the root module instead of the current working directory.
 
 That usage is still supported in Terraform v0.14, but is now deprecated and we plan to remove it in Terraform v0.15. If your workflow relies on overriding the root module directory, use the -chdir global option instead, which works across all commands and makes Terraform consistently look in the given directory for all files it would normaly read or write in the current working directory.

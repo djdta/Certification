@@ -1,9 +1,11 @@
-## 6f Destroy Terraform managed infrastructure (terraform destroy)
+# 6f Destroy Terraform managed infrastructure (terraform destroy)
 
 ## Summary
+
 The terraform destroy command is used to destroy the Terraform-managed infrastructure.
 
 ## Usage
+
 Usage: terraform destroy [options]
 
 Infrastructure managed by Terraform will be destroyed. This will ask for confirmation before destroying.

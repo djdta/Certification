@@ -1,6 +1,7 @@
-## 7g Understand secret management in state files
+# 7g Understand secret management in state files
 
 ## Summary
+
 Terraform state can contain sensitive data, depending on the resources in use and your definition of "sensitive." The state contains resource IDs and all resource attributes. For resources such as databases, this may contain initial passwords.
 
 When using local state, state is stored in plain-text JSON files.
@@ -8,6 +9,7 @@ When using local state, state is stored in plain-text JSON files.
 When using remote state, state is only ever held in memory when used by Terraform. It may be encrypted at rest, but this depends on the specific remote state backend.
 
 ## Recommendations
+
 If you manage any sensitive data with Terraform (like database passwords, user passwords, or private keys), treat the state itself as sensitive data.
 
 Storing state remotely can provide better security. As of Terraform 0.9, Terraform does not persist state to the local disk when remote state is in use, and some backends can be configured to encrypt the state data at rest.

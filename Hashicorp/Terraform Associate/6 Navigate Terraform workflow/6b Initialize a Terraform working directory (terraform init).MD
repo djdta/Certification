@@ -1,9 +1,11 @@
-## 6b Initialize a Terraform working directory (terraform init)
+# 6b Initialize a Terraform working directory (terraform init)
 
 ## Summary
+
 The terraform init command is used to initialize a working directory containing Terraform configuration files. This is the first command that should be run after writing a new Terraform configuration or cloning an existing one from version control. It is safe to run this command multiple times.
 
 ## Usage
+
 Usage: terraform init [options]
 
 This command performs several different initialization steps in order to prepare the current working directory for use with Terraform. More details on these are in the sections below, but in most cases it is not necessary to worry about these individual steps.

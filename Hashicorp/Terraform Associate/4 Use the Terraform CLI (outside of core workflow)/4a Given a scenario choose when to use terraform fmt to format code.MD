@@ -1,4 +1,4 @@
-## 4a Given a scenario: choose when to use terraform fmt to format code
+# 4a Given a scenario: choose when to use terraform fmt to format code
 
 #### Summary
 

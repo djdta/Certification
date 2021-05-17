@@ -1,7 +1,8 @@
-## 2B: Explain the Benefits of State
+# 2B: Explain the Benefits of State
 
 
-Purpose of Terraform State
+## Purpose of Terraform State
+
 Jump to Section
 State is a necessary requirement for Terraform to function. It is often asked if it is possible for Terraform to work without state, or for Terraform to not use state and just inspect cloud resources on every run. This page will help explain why Terraform state is required.
 

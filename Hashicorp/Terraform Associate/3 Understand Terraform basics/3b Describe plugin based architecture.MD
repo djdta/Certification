@@ -1,6 +1,6 @@
-## 3b Describe plug-in based architecture
+# 3b Describe plug-in based architecture
 
-##### Summary
+## Summary
 
 Initialize the directory
 When you create a new configuration — or check out an existing configuration from version control — you need to initialize the directory with terraform init.

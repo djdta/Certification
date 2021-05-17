@@ -1,6 +1,7 @@
-## 7d Describe remote state storage mechanisms and supported standard backends
+# 7d Describe remote state storage mechanisms and supported standard backends
 
 ## Summary
+
 Each Terraform configuration can specify a backend, which defines exactly where and how operations are performed, where state snapshots are stored, etc. Most non-trivial Terraform configurations configure a remote backend so that multiple people can work with the same infrastructure.
 
 Using a Backend Block
@@ -23,6 +24,7 @@ There are some important limitations on backend configuration:
 * A backend block cannot refer to named values (like input variables, locals, or data source attributes).
 
 ## Backend Types
+
 The block label of the backend block ("remote", in the example above) indicates which backend type to use. Terraform has a built-in selection of backends, and the configured backend must be available in the version of Terraform you are using.
 
 The arguments used in the block's body are specific to the chosen backend type; they configure where and how the backend will store the configuration's state, and in some cases configure other behavior.

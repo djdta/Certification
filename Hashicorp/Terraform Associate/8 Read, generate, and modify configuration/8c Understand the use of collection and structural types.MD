@@ -1,11 +1,13 @@
-## 8c 	Understand the use of collection and structural types
+# 8c Understand the use of collection and structural types
 
 ## Summary
+
 A complex type is a type that groups multiple values into a single value. Complex types are represented by type constructors, but several of them also have shorthand keyword versions.
 
 There are two categories of complex types: collection types (for grouping similar values), and structural types (for grouping potentially dissimilar values).
 
 ## Collection Types
+
 A collection type allows multiple values of one other type to be grouped together as a single value. The type of value within a collection is called its element type. All collection types must have an element type, which is provided as the argument to their constructor.
 
 For example, the type list(string) means "list of strings", which is a different type than list(number), a list of numbers. All elements of a collection must always be of the same type.
@@ -27,6 +29,7 @@ Note: although colons are valid delimiters between keys and values, they are cur
 * set(...): a collection of unique values that do not have any secondary identifiers or ordering.
 
 ## Structural Types
+
 A structural type allows multiple values of several distinct types to be grouped together as a single value. Structural types require a schema as an argument, to specify which types are allowed for which elements.
 
 The two kinds of structural type in the Terraform language are:
@@ -55,11 +58,13 @@ Finally, a tuple type of tuple([string, number, bool]) would match a value like 
 ["a", 15, true]
 
 ## Complex Type Literals
+
 The Terraform language has literal expressions for creating tuple and object values, which are described in Expressions: Literal Expressions as "list/tuple" literals and "map/object" literals, respectively.
 
 Terraform does not provide any way to directly represent lists, maps, or sets. However, due to the automatic conversion of complex types (described below), the difference between similar complex types is almost never relevant to a normal user, and most of the Terraform documentation conflates lists with tuples and maps with objects. The distinctions are only useful when restricting input values for a module or resource.
 
 ## Conversion of Complex Types
+
 Similar kinds of complex types (list/tuple/set and map/object) can usually be used interchangeably within the Terraform language, and most of Terraform's documentation glosses over the differences between the kinds of complex type. This is due to two conversion behaviors:
 
 Whenever possible, Terraform converts values between similar kinds of complex types if the provided value is not the exact type requested. "Similar kinds" is defined as follows:
@@ -84,6 +89,7 @@ On the other hand, automatic conversion will fail if the provided value (includi
 Terraform will raise a type mismatch error, since a tuple cannot be converted to a string.
 
 ## Dynamic Types: The "any" Constraint
+
 The keyword any is a special construct that serves as a placeholder for a type yet to be decided. any is not itself a type: when interpreting a value against a type constraint containing any, Terraform will attempt to find a single actual type that could replace the any keyword to produce a valid result.
 
 For example, given the type constraint list(any), Terraform will examine the given value and try to choose a replacement for the any that would make the result valid.
@@ -113,6 +119,7 @@ variable "no_type_constraint" {
 In this case, Terraform will replace any with the exact type of the given value and thus perform no type conversion whatsoever.
 
 ## Experimental: Optional Object Type Attributes
+
 From Terraform v0.14 there is experimental support for marking particular attributes as optional in an object type constraint.
 
 To mark an attribute as optional, use the additional optional(...) modifier around its type declaration:

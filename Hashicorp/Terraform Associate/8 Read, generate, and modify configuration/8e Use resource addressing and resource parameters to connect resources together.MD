@@ -1,11 +1,13 @@
-## 8e Use resource addressing and resource parameters to connect resources together
+# 8e Use resource addressing and resource parameters to connect resources together
 
 ## Summary
+
 A Resource Address is a string that references a specific resource in a larger infrastructure. An address is made up of two parts:
 
 [module path][resource spec]
 
 ## Module path
+
 A module path addresses a module within the tree of modules. It takes the form:
 
 * module.module_name[module index]
@@ -22,6 +24,7 @@ module.foo[0].module.bar["a"]
 Module index only applies to modules in Terraform v0.13 or later, as in earlier versions of Terraform, a module could not have multiple instances.
 
 ## Resource spec
+
 A resource spec addresses a specific resource in the config. It takes the form:
 
 resource_type.resource_name[resource index]
@@ -57,6 +60,7 @@ aws_instance.web
 Refers to all four "web" instances.
 
 ## for_each Example
+
 Given a Terraform config that includes:
 
 ```

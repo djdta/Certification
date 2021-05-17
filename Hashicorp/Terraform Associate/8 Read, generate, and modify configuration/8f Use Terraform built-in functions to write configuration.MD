@@ -1,4 +1,4 @@
-## 8f Use Terraform built-in functions to write configuration
+# 8f Use Terraform built-in functions to write configuration
 
 ## Summary
 
@@ -19,6 +19,5 @@ You can experiment with the behavior of Terraform's built-in functions from the 
 ```
 
 The examples in the documentation for each function use console output to illustrate the result of calling the function with different parameters.
-
 
 https://www.terraform.io/docs/configuration/functions.html

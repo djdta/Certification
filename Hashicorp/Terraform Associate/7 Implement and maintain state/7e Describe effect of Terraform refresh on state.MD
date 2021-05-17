@@ -1,11 +1,13 @@
-## 7e 	Describe effect of Terraform refresh on state
+# 7e Describe effect of Terraform refresh on state
 
 ## Summary
+
 The terraform refresh command is used to reconcile the state Terraform knows about (via its state file) with the real-world infrastructure. This can be used to detect any drift from the last-known state, and to update the state file.
 
 This does not modify infrastructure, but does modify the state file. If the state is changed, this may cause changes to occur during the next plan or apply.
 
 ## Usage
+
 Usage: terraform refresh [options]
 
 The terraform refresh command accepts the following options:
@@ -33,6 +35,5 @@ The terraform refresh command accepts the following options:
 * -var 'foo=bar' - Set a variable in the Terraform configuration. This flag can be set multiple times. Variable values are interpreted as literal expressions in the Terraform language, so list and map values can be specified via this flag.
 
 * -var-file=foo - Set variables in the Terraform configuration from a variable file. If a terraform.tfvars or any .auto.tfvars files are present in the current directory, they will be automatically loaded. terraform.tfvars is loaded first and the .auto.tfvars files after in alphabetical order. Any files specified by -var-file override any values set automatically from files in the working directory. This flag can be used multiple times.
-
 
 https://www.terraform.io/docs/commands/refresh.html

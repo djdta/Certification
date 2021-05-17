@@ -1,6 +1,7 @@
-## 9a Describe the benefits of Sentinel, registry, and workspaces
+# 9a Describe the benefits of Sentinel, registry, and workspaces
 
 ## Summary
+
 Sentinel is an embedded policy-as-code framework integrated with the HashiCorp Enterprise products. It enables fine-grained, logic-based policy decisions, and can be extended to use information from external sources.
 
 To learn how to use Sentinel and begin writing policies with the Sentinel language, see the Sentinel documentation.
@@ -18,6 +19,7 @@ Enforcing policy checks on runs - Policies are checked when a run is performed, 
 Mocking Sentinel Terraform data - Terraform Cloud provides the ability to generate mock data for any run within a workspace. This data can be used with the Sentinel CLI to test policies before deployment.
 
 ## Standard Imports
+
 The Terraform integration for HashiCorp Sentinel implements all of the available standard imports.
 
 ## Private Module Registry
@@ -33,6 +35,7 @@ Hands-on: Try the Get Started - Terraform Cloud collection on HashiCorp Learn.
 Workspaces are how Terraform Cloud organizes infrastructure.
 
 ## Workspaces are Collections of Infrastructure
+
 Working with Terraform involves managing collections of infrastructure resources, and most organizations manage many different collections.
 
 When run locally, Terraform manages each collection of infrastructure with a persistent working directory, which contains a configuration, state data, and variables. Since Terraform CLI uses content from the directory it runs in, you can organize infrastructure resources into meaningful groups by keeping their configurations in separate directories.
@@ -44,12 +47,13 @@ Note: Terraform Cloud and Terraform CLI both have features called "workspaces," 
 API: See the Workspaces API.
 
 ## Workspace Contents
+
 Terraform Cloud workspaces and local working directories serve the same purpose, but they store their data differently:
 
-Component	Local Terraform	Terraform Cloud
-Terraform configuration	On disk	In linked version control repository, or periodically uploaded via API/CLI
-Variable values	As .tfvars files, as CLI arguments, or in shell environment	In workspace
-State	On disk or in remote backend	In workspace Credentials and secrets	In shell environment or entered at prompts	In workspace, stored as sensitive variables
+Component Local Terraform Terraform Cloud
+Terraform configuration On disk In linked version control repository, or periodically uploaded via API/CLI
+Variable values As .tfvars files, as CLI arguments, or in shell environment In workspace
+State On disk or in remote backend In workspace Credentials and secrets In shell environment or entered at prompts In workspace, stored as sensitive variables
 In addition to the basic Terraform content, Terraform Cloud keeps some additional data for each workspace:
 
 State versions: Each workspace retains backups of its previous state files. Although only the current state is necessary for managing resources, the state history can be useful for tracking changes over time or recovering from problems. (See also: State.)
@@ -57,11 +61,13 @@ State versions: Each workspace retains backups of its previous state files. Alth
 Run history: When Terraform Cloud manages a workspace's Terraform runs, it retains a record of all run activity, including summaries, logs, a reference to the changes that caused the run, and user comments. (See also: Viewing and Managing Runs.)
 
 ## Terraform Runs
+
 For workspaces with remote operations enabled (the default), Terraform Cloud performs Terraform runs on its own disposable virtual machines, using that workspace's configuration, variables, and state.
 
 For more information, see Terraform Runs and Remote Operations.
 
 ## Listing and Filtering Workspaces
+
 Terraform Cloud's top navigation bar includes a "Workspaces" link, which takes you to the list of workspaces in the current organization.
 
 Screenshot: the list of workspaces
@@ -83,6 +89,7 @@ Name filter: The search field at the far right of the filter bar lets you filter
 The name filter can combine with a status filter, to narrow the list down further.
 
 ## Planning and Organizing Workspaces
+
 We recommend that organizations break down large monolithic Terraform configurations into smaller ones, then assign each one to its own workspace and delegate permissions and responsibilities for them. Terraform Cloud can manage monolithic configurations just fine, but managing smaller infrastructure components like this is the best way to take full advantage of Terraform Cloud's governance and delegation features.
 
 For example, the code that manages your production environment's infrastructure could be split into a networking configuration, the main application's configuration, and a monitoring configuration. After splitting the code, you would create "networking-prod", "app1-prod", "monitoring-prod" workspaces, and assign separate teams to manage them.
@@ -105,11 +112,10 @@ Security Policies. Security policies adopted internally protect data privacy and
 Operational Excellence. These policies prevent service outages or degradation. For example, a policy may mandate at least two service instances, or validation of new configurations.
 Historically, most policies are defined and enforced the same way. Policy authors translate the business requirements into a Word document with specific rules that should be enforced. Enforcement of policy is based on a ticketing workflow, where tickets are filed against a compliance or security team. For each ticket, the policy document is used to verify the ticket which is either approved or denied.
 
-
-
 This workflow is slow, error prone, and makes it difficult to scale either the number of policies or the number of tickets being reviewed. End to end automation is difficult since the ticketing workflow is asynchronous and slow, and the implementation is often different for each system.
 
 ## What is Policy as Code?
+
 Our driving mission has been infrastructure as code, the idea that infrastructure can be codified and automated with tools like Terraform and Nomad. This approach allows configuration to be tested, peer reviewed, versioned, automated, and re-used much like application code. Applying this approach to policy seemed natural and brings the same benefits.
 
 Treating policy as code requires a way to specify policies and a mechanism to enforce them. Traditionally, policies were defined in Word documents and enforced manually. Instead, Sentinel provides a simple policy-oriented language to write policies, and integrates with our tools like Terraform Enterprise and Nomad Enterprise to enforce them. Below is an example Sentinel policy that ensures staging is deployed to the "us-east-1" region, while production is deployed to "us-west-1":
@@ -140,6 +146,7 @@ main = rule {
 The goal of the language is to be simple to read and write by individuals with a limited background in programming. This motivated us to write a custom language rather than adopt a general purpose programming language.
 
 ## Testability
+
 One of the other benefits of Sentinel is that it also has a full testing framework. Consider the previous example, we could write a test case to validate its correctness using simple json syntax:
 
 ```
@@ -189,11 +196,13 @@ PASS - staging.sentinel
 Using this approach we can construct multiple test cases for pass and fail scenarios, allowing us to easily validate our policy without having to execute it. This also allows us to change our policy and ensure regressions are not introduced.
 
 ## Executing Policy
+
 Once written, the policy can be enforced automatically without manual review. This enforcement is best done in the change path, so that policy violations can be prevented rather than detected. Detecting policy violations requires a separate remediation workflow and is more cumbersome than preventing the problem entirely. Here is an example enforcement workflow with Terraform Enterprise:
 
 This workflow decouples the policy definition and enforcement, keeping a fast feedback loop for operators. Using automation avoids the human error inherent to a manual review process, and allows a large number of policies or changes as well.
 
 ## Conclusion
+
 Using a ticketing queue and manual review for policy enforcement can bottleneck changes. Policy as code uses codified policies and automated enforcement. This approach extends on infrastructure as code, which brought similar benefits. Sentinel is a framework for policy as code that we introduced and have integrated into Terraform Enterprise, Vault Enterprise, Nomad Enterprise, and Consul Enterprise. Avoiding a ticketing workflow allows organizations to provide more self-service capabilities and end-to-end automation, minimizing the friction for developers and operators.
 
 HashiCorp Terraform Module Registry
@@ -209,9 +218,11 @@ The HashiCorp Terraform Module Registry gives Terraform users easy access to tem
 The Terraform Module Registry is available at registry.terraform.io. The complete documentation for using the Module Registry can be found at https://www.terraform.io/docs/registry/index.html.
 
 ## Terraform Module Registry Goals
+
 The Module Registry addresses key challenges for module producers and module consumers. For module producers, the registry is a central place to publish, version, and share modules. For module consumers, the registry is a central place to discover, use, and collaborate on modules. The Module Registry makes it easier for partners and community members to share and collaborate on modules and also to update and version modules to continuously make improvements to infrastructure configurations. Expert users can share their knowledge and beginners can get up and running on Terraform faster.
 
 ## Module Search
+
 To address the challenge of finding modules, the Module Registry provides discovery through search and by surfacing popular modules.
 
 ## Module Registry Landing Page
@@ -232,6 +243,7 @@ As modules change over time the registry will automatically track the versions r
 Each module also displays the details for inputs, outputs, and resources created. If a module depends on external modules, these are listed too.
 
 ## Using a Module from the Registry
+
 Once you have found a module you want to use, you can copy the code in the Provision Instructions into your configuration to import it. If the module has any required variables, you will need to add those to the pasted code block. When viewing the module in the registry, you can view the list of required variables in the Inputs section. You can then complete the import process by running terraform init.
 
 ## Registry Download
@@ -239,6 +251,7 @@ Once you have found a module you want to use, you can copy the code in the Provi
 The complete documentation for using the Module Registry can be found at https://www.terraform.io/docs/registry/index.html.
 
 ## Powered by Partners and the Community
+
 The Module Registry provides a central place to publish modules. The cloud vendors and their communities contribute and maintain modules for the Module Registry. This model allows partners with the best expertise to provide reliable and quality modules for Alibaba Cloud, AWS, Google Cloud Platform, Microsoft Azure, and Oracle Cloud. The Module Registry is populated with an initial set of some of the most common infrastructure topologies used by customers. These initial services available today include example modules for compute, compute groups, core networking, databases, and load balancers. There are also modules contributed by CoreOS for Kubernetes and from Gruntwork, who built and maintain modules for HashiCorp Consul, Vault, and Nomad on AWS, Azure, and GCP.
 
 You can read more about how HashiCorp and Google expand collaboration, easing secret and infrastructure management in Google's blog. Microsoft has also detailed their collaboration on Terraform and the Module Registry in their blog More and more fun with Terraform on Azure. There is also a blog from Oracle, Announcing Oracle Cloud Infrastructure Modules for the Terraform Module Registry.
@@ -251,6 +264,7 @@ Integration of the Module Registry with Terraform Enterprise
 HashiCorp Terraform Enterprise will deliver a private version of the Module Registry in an upcoming release. This will allow organizations to safely share private modules with their internal teams. The integration of the Module Registry into Terraform Enterprise will allow organizations to standardize on expert modules across their user base. For more information on Terraform Enterprise, visit hashicorp.com/products/terraform
 
 ## Conclusion
+
 Terraform provides organizations with infrastructure as code, cloud platform management, and the ability to create modules for self-service infrastructure. The Module Registry provides a new platform for sharing and reuse to empower individuals to quickly provision and manage their infrastructure with Terraform.
 
 To get started with Terraform Module Registry, visit https://registry.terraform.io.

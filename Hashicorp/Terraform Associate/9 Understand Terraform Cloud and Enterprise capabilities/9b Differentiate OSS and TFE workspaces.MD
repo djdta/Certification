@@ -1,6 +1,7 @@
-## 9b Differentiate OSS and Terraform Cloud workspaces
+# 9b Differentiate OSS and Terraform Cloud workspaces
 
 ## Workspaces
+
 Jump to Section
 Each Terraform configuration has an associated backend that defines how operations are executed and where persistent data such as the Terraform state are stored.
 
@@ -26,6 +27,7 @@ In the 0.9 line of Terraform releases, this concept was known as "environment". 
 Note: The Terraform CLI workspace concept described in this document is different from but related to the Terraform Cloud workspace concept. If you use multiple Terraform CLI workspaces in a single Terraform configuration and are migrating that configuration to Terraform Cloud, see this migration document.
 
 ## Using Workspaces
+
 Terraform starts with a single workspace named "default". This workspace is special both because it is the default and also because it cannot ever be deleted. If you've never explicitly used workspaces, then you've only ever worked on the "default" workspace.
 
 Workspaces are managed with the terraform workspace set of commands. To create a new workspace and switch to it, you can use terraform workspace new; to switch workspaces you can use terraform workspace select; etc.
@@ -68,6 +70,7 @@ resource "aws_instance" "example" {
 ```
 
 ## When to use Multiple Workspaces
+
 Named workspaces allow conveniently switching between multiple instances of a single configuration within its single backend. They are convenient in a number of situations, but cannot solve all problems.
 
 A common use for multiple workspaces is to create a parallel, distinct copy of a set of infrastructure in order to test a set of changes before modifying the main production infrastructure. For example, a developer working on a complex set of infrastructure changes might create a new temporary workspace in order to freely experiment with changes without affecting the default workspace.
@@ -101,5 +104,5 @@ The important thing about workspace internals is that workspaces are meant to be
 
 The "current workspace" name is stored only locally in the ignored .terraform directory. This allows multiple team members to work on different workspaces concurrently. The "current workspace" name is not currently meaningful in Terraform Cloud workspaces since it will always have the value default.
 
-https://www.terraform.io/docs/state/workspaces.html
-https://www.terraform.io/docs/cloud/workspaces/index.html
+<https://www.terraform.io/docs/state/workspaces.html>
+<https://www.terraform.io/docs/cloud/workspaces/index.html>

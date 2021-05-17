@@ -1,4 +1,4 @@
-## 4e Given a scenario: choose when to use terraform state to view Terraform state
+# 4e Given a scenario: choose when to use terraform state to view Terraform state
 
 #### Summary
 The terraform state command is used for advanced state management. As your Terraform usage becomes more advanced, there are some cases where you may need to modify the Terraform state. Rather than modify the state directly, the terraform state commands can be used in many cases instead.

@@ -1,4 +1,4 @@
-## 4b Given a scenario: choose when to use terraform taint to taint Terraform resources
+# 4b Given a scenario: choose when to use terraform taint to taint Terraform resources
 
 #### Summary
 The terraform taint command manually marks a Terraform-managed resource as tainted, forcing it to be destroyed and recreated on the next apply.

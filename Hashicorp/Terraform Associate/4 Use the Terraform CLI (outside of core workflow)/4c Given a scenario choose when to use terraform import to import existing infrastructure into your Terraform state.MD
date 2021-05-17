@@ -1,4 +1,4 @@
-## 4c Given a scenario: choose when to use terraform import to import existing infrastructure into your Terraform state
+# 4c Given a scenario: choose when to use terraform import to import existing infrastructure into your Terraform state
 
 #### Summary
 Import will find the existing resource from ID and import it into your Terraform state at the given ADDRESS.

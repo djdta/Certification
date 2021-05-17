@@ -1,6 +1,6 @@
-## 3e Explain when to use and not use provisioners and when to use local-exec or remote-exec
+# 3e Explain when to use and not use provisioners and when to use local-exec or remote-exec
 
-## Summary 
+## Summary
 
 Provisioners are used to execute scripts on a local or remote machine as part of resource creation or destruction. Provisioners can be used to bootstrap a resource, cleanup before destroy, run configuration management, etc.
 

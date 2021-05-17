@@ -1,4 +1,4 @@
-## 4d Given a scenario: choose when to use terraform workspace to create workspaces
+# 4d Given a scenario: choose when to use terraform workspace to create workspaces
 
 #### Summary
 Workspaces are managed with the terraform workspace set of commands. To create a new workspace and switch to it, you can use terraform workspace new; to switch workspaces you can use terraform workspace select; etc.

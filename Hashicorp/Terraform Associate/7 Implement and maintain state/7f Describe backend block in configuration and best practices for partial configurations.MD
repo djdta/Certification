@@ -1,6 +1,7 @@
-## 7e Describe backend block in configuration and best practices for partial configurations
+# 7e Describe backend block in configuration and best practices for partial configurations
 
 ## Summary
+
 Each Terraform configuration can specify a backend, which defines exactly where and how operations are performed, where state snapshots are stored, etc. Most non-trivial Terraform configurations configure a remote backend so that multiple people can work with the same infrastructure.
 
 Using a Backend Block
@@ -24,6 +25,7 @@ A configuration can only provide one backend block.
 A backend block cannot refer to named values (like input variables, locals, or data source attributes).
 
 ## Backend Types
+
 The block label of the backend block ("remote", in the example above) indicates which backend type to use. Terraform has a built-in selection of backends, and the configured backend must be available in the version of Terraform you are using.
 
 The arguments used in the block's body are specific to the chosen backend type; they configure where and how the backend will store the configuration's state, and in some cases configure other behavior.
@@ -33,9 +35,11 @@ Some backends allow providing access credentials directly as part of the configu
 See the list of backend types in the navigation sidebar for details about each supported backend type and its configuration arguments.
 
 ## Default Backend
+
 If a configuration includes no backend block, Terraform defaults to using the local backend, which performs operations on the local system and stores state as a plain file in the current working directory.
 
 ## Initialization
+
 Whenever a configuration's backend changes, you must run terraform init again to validate and configure the backend before you can perform any plans, applies, or state operations.
 
 When changing backends, Terraform will give you the option to migrate your state to the new backend. This lets you adopt backends without losing any existing state.
@@ -43,6 +47,7 @@ When changing backends, Terraform will give you the option to migrate your state
 To be extra careful, we always recommend manually backing up your state as well. You can do this by simply copying your terraform.tfstate file to another location. The initialization process should create a backup as well, but it never hurts to be safe!
 
 ## Partial Configuration
+
 You do not need to specify every required argument in the backend configuration. Omitting certain arguments may be desirable if some arguments are provided automatically by an automation script running Terraform. When some or all of the arguments are omitted, we call this a partial configuration.
 
 With a partial configuration, the remaining configuration arguments must be provided as part of the initialization process. There are several ways to supply the remaining arguments:
@@ -81,6 +86,7 @@ $ terraform init \
 The Consul backend also requires a Consul access token. Per the recommendation above of omitting credentials from the configuration and using other mechanisms, the Consul token would be provided by setting either the CONSUL_HTTP_TOKEN or CONSUL_HTTP_AUTH environment variables. See the documentation of your chosen backend to learn how to provide credentials to it outside of its main configuration.
 
 ## Changing Configuration
+
 You can change your backend configuration at any time. You can change both the configuration itself as well as the type of backend (for example from "consul" to "s3").
 
 Terraform will automatically detect any changes in your configuration and request a reinitialization. As part of the reinitialization process, Terraform will ask if you'd like to migrate your existing state to the new configuration. This allows you to easily switch from one backend to another.
@@ -90,6 +96,7 @@ If you're using multiple workspaces, Terraform can copy all workspaces to the de
 If you're just reconfiguring the same backend, Terraform will still ask if you want to migrate your state. You can respond "no" in this scenario.
 
 ## Unconfiguring a Backend
+
 If you no longer want to use any backend, you can simply remove the configuration from the file. Terraform will detect this like any other change and prompt you to reinitialize.
 
 As part of the reinitialization, Terraform will ask if you'd like to migrate your state back down to normal local state. Once this is complete then Terraform is back to behaving as it does by default.

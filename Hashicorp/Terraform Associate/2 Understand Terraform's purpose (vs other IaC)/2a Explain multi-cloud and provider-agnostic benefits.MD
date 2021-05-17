@@ -1,4 +1,4 @@
-## 2a Explain multi-cloud and provider-agnostic benefits
+# 2a Explain multi-cloud and provider-agnostic benefits
 
 * CloudFormation from AWS
 * Azure Resource Manager (ARM) Templates

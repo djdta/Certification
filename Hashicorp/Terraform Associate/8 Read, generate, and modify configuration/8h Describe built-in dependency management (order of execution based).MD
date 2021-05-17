@@ -1,6 +1,7 @@
 ## 8h Describe built-in dependency management (order of execution based)
 
 ## Summary
+
 In this tutorial, you will learn about dependencies between resources and modules. Most of the time, Terraform infers dependencies between resources based on the configuration given, so that resources are created and destroyed in the correct order. Occasionally, however, Terraform cannot infer dependencies between different parts of your infrastructure, and you will need to create an explicit dependency with the depends_on argument.
 
 Manage implicit dependencies

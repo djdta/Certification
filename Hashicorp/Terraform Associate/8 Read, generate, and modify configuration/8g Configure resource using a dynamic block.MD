@@ -1,8 +1,9 @@
-## 8g Configure resource using a dynamic block
+# 8g Configure resource using a dynamic block
 
 ## Summary
 
 ## dynamic Blocks
+
 Within top-level block constructs like resources, expressions can usually be used only when assigning a value to an argument using the name = expression form. This covers many uses, but some resource types include repeatable nested blocks in their arguments, which do not accept expressions:
 
 ```
@@ -55,6 +56,7 @@ A dynamic block can only generate arguments that belong to the resource type, da
 The for_each value must be a map or set with one element per desired nested block. If you need to declare resource instances based on a nested data structure or combinations of elements from multiple data structures you can use Terraform expressions and functions to derive a suitable value. For some common examples of such situations, see the flatten and setproduct functions.
 
 ## Best Practices for dynamic Blocks
+
 Overuse of dynamic blocks can make configuration hard to read and maintain, so we recommend using them only when you need to hide details in order to build a clean user interface for a re-usable module. Always write nested blocks out literally where possible.
 
 https://www.terraform.io/docs/configuration/expressions/dynamic-blocks.html

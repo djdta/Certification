@@ -1,4 +1,4 @@
-## 4f Given a scenario: choose when to enable verbose logging and what the outcome/value is
+# 4f Given a scenario: choose when to enable verbose logging and what the outcome/value is
 
 #### Summary
 Terraform has detailed logs which can be enabled by setting the TF_LOG environment variable to any value. This will cause detailed logs to appear on stderr.

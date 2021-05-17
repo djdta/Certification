@@ -1,6 +1,7 @@
-## 7c Handle backend authentication methods
+# 7c Handle backend authentication methods
 
 ## Summary
+
 Each Terraform configuration can specify a backend, which defines where and how operations are performed, where state snapshots are stored, etc.
 
 The rest of this page introduces the concept of backends; the other pages in this section document how to configure and use backends.
@@ -9,27 +10,32 @@ Backend Configuration documents the form of a backend block, which selects and c
 This section also includes a page for each of Terraform's built-in backends, documenting its behavior and available settings. See the navigation sidebar for a complete list.
 
 # Recommended Backends
+
 If you are still learning how to use Terraform, we recommend using the default local backend, which requires no configuration.
 
 If you and your team are using Terraform to manage meaningful infrastructure, we recommend using the remote backend with Terraform Cloud or Terraform Enterprise.
 
 ## Where Backends are Used
+
 Backend configuration is only used by Terraform CLI. Terraform Cloud and Terraform Enterprise always use their own state storage when performing Terraform runs, so they ignore any backend block in the configuration.
 
 But since it's common to use Terraform CLI alongside Terraform Cloud (and since certain state operations, like tainting, can only be performed on the CLI), we recommend that Terraform Cloud users include a backend block in their configurations and configure the remote backend to use the relevant Terraform Cloud workspace(s).
 
 ## Where Backends Come From
+
 Terraform includes a built-in selection of backends; this selection has changed over time, but does not change very often.
 
 The built-in backends are the only backends. You cannot load additional backends as plugins.
 
 ## What Backends Do
+
 There are two areas of Terraform's behavior that are determined by the backend:
 
 Where state is stored.
 Where operations are performed.
 
 ## State
+
 Terraform uses persistent state data to keep track of the resources it manages. Since it needs the state in order to know which real-world infrastructure objects correspond to the resources in a configuration, everyone working with a given collection of infrastructure resources must be able to access the same state data.
 
 The local backend stores state as a local file on disk, but every other backend stores state in a remote service of some kind, which allows multiple people to access it. Accessing state in a remote service generally requires some kind of access credentials, since state data contains extremely sensitive information.
@@ -37,6 +43,7 @@ The local backend stores state as a local file on disk, but every other backend 
 Some backends act like plain "remote disks" for state files; others support locking the state while operations are being performed, which helps prevent conflicts and inconsistencies.
 
 ## Operations
+
 "Operations" refers to performing API requests against infrastructure services in order to create, read, update, or destroy resources. Not every terraform subcommand performs API operations; many of them only operate on state data.
 
 Only two backends actually perform operations: local and remote.
@@ -48,6 +55,7 @@ The remote backend can perform API operations remotely, using Terraform Cloud or
 Remote operations are optional for the remote backend; the settings for the target Terraform Cloud workspace determine whether operations run remotely or locally. If local operations are configured, Terraform uses the remote backend for state and the local backend for operations, like with the other state backends.
 
 ## Backend Types
+
 Terraform's backends are divided into two main types, according to how they handle state and operations:
 
 Enhanced backends can both store state and perform operations. There are only two enhanced backends: local and remote.

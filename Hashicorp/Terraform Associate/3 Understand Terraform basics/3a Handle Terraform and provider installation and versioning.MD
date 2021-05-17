@@ -1,7 +1,6 @@
-## 3a Handle Terraform and provider installation and versioning
+# 3a Handle Terraform and provider installation and versioning
 
 Please view the providers.tf file to view examples of how this can be used.
-
 
 Here below is some explains of versioning and please view the versioning.tf.
 
@@ -24,7 +23,7 @@ The following operators are valid:
 * ~>: Allows only the rightmost version component to increment. For example, to allow new patch releases within a specific minor release, use the full version number: ~> 1.0.4 will allow installation of 1.0.5 and 1.0.10 but not 1.1.0. This is usually called the pessimistic constraint operator.
 
 ## Terraform Core and Provider Versions
+
 Reusable modules should constrain only their minimum allowed versions of Terraform and providers, such as >= 0.12.0. This helps avoid known incompatibilities, while allowing the user of the module flexibility to upgrade to newer versions of Terraform without altering the module.
 
 Root modules should use a ~> constraint to set both a lower and upper bound on versions for each provider they depend on.
-

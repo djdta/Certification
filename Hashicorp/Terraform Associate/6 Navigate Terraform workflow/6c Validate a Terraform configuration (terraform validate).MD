@@ -1,4 +1,4 @@
-## 6c 	Validate a Terraform configuration (terraform validate)
+## 6c Validate a Terraform configuration (terraform validate)
 
 ## Summary
 The terraform validate command validates the configuration files in a directory, referring only to the configuration and not accessing any remote services such as remote state, provider APIs, etc.
