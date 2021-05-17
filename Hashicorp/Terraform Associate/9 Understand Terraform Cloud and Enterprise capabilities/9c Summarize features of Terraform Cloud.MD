@@ -114,7 +114,7 @@ On Terraform Enterprise versions v202005-1 or later, administrators can allow sp
 |Concurrent Runs| Up to 1 | Up to 2 | ✔️ | ✔️ |
 |Operations| Local CLI | Cloud | Cloud  | Cloud  |
 |Community| ✔️ |
-|Bronze| aligned |  ✔️ |  ✔️  |  ✔️  |
+|Bronze||  ✔️ |  ✔️  |  ✔️  |
 |Silver|||  ✔️  |  ✔️  |
 |Gold|||   ✔️  |  ✔️  |
 
