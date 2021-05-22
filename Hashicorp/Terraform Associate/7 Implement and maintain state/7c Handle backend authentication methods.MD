@@ -9,7 +9,7 @@ The rest of this page introduces the concept of backends; the other pages in thi
 Backend Configuration documents the form of a backend block, which selects and configures a backend for a Terraform configuration.
 This section also includes a page for each of Terraform's built-in backends, documenting its behavior and available settings. See the navigation sidebar for a complete list.
 
-# Recommended Backends
+## Recommended Backends
 
 If you are still learning how to use Terraform, we recommend using the default local backend, which requires no configuration.
 
