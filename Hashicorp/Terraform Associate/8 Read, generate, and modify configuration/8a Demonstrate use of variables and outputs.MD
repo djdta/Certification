@@ -31,7 +31,7 @@ This uses the variable named region, prefixed with var.. It tells Terraform that
 
 ## Assigning variables
 
-There are multiple ways to assign variables. The order below is also the order in which variable values are chosen.
+There are multiple ways to assign variables. The order below is also the order in which variable  values are chosen.
 
 ## Command-line flags
 

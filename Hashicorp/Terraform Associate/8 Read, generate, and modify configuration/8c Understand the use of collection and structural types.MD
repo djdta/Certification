@@ -84,7 +84,7 @@ For example: if a module argument requires a value of type list(string) and a us
 
 On the other hand, automatic conversion will fail if the provided value (including any of its element values) is incompatible with the required type. If an argument requires a type of map(string) and a user provides the object 
 
-{name = ["Kristy", "Claudia", "Mary Anne", "Stacey"], age = 12}, 
+{name = ["Kristy", "Claudia", "Mary Anne", "Stacey"], age = 12},
 
 Terraform will raise a type mismatch error, since a tuple cannot be converted to a string.
 
