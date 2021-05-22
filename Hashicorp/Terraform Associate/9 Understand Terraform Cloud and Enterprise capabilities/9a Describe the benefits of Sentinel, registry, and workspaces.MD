@@ -97,9 +97,7 @@ For example, the code that manages your production environment's infrastructure 
 Much like splitting monolithic applications into smaller microservices, this enables teams to make changes in parallel. In addition, it makes it easier to re-use configurations to manage other environments of infrastructure ("app1-dev," etc.).
 
 Why Policy as Code?
-JAN 12 2018
-|
-ARMON DADGAR
+
 HashiCorp advocates for "infrastructure as code" approaches to managing infrastructure. We have talked about it publicly and published about it in our Tao of HashiCorp. At HashiConf 2017, we announced Sentinel, a framework for "policy as code". The same coding practices that are applied to infrastructure can be very effective in enforcing and managing policies. Codifying policy removes the need for ticketing queues, without sacrificing enforcement.
 
 Operators adopt tools like HashiCorp Terraform to provide a simple workflow for managing infrastructure. Users write configurations and run a few commands to test and apply changes. Organizations with governance requirements typically interrupt this workflow with ticketing queues to enforce policies.
