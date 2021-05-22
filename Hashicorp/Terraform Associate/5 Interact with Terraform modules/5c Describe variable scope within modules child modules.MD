@@ -183,7 +183,6 @@ To specify individual variables on the command line, use the -var option when ru
 
 The -var option can be used any number of times in a single command.
 
-
 #### Variable Definitions (.tfvars) Files
 
 To set lots of variables, it is more convenient to specify their values in a variable definitions file (with a filename ending in either .tfvars or .tfvars.json) and then specify that file on the command line with -var-file:
