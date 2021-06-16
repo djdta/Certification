@@ -1,7 +1,6 @@
 # Secuirty and Compliance
 
 ## IAM Users
----
 
 * Users single unit which allows users to login.
 * Users can have cli access without access to management console.
@@ -22,7 +21,6 @@
 ```
 
 ## IAM Groups
----
 
 * Groups can be used to seprate into functions i.e Administrator, Support Staff
 
@@ -35,8 +33,6 @@
 ```
 
 ## IAM Policy
-
----
 
 * Policy can be added to users and groups.
 * Any Deny rules is the highest of approve.
