@@ -3,9 +3,10 @@
 ## IAM Users
 ---
 
-* Users single unit which allows users to login
+* Users single unit which allows users to login.
 * Users can have cli access without access to management console.
 * Users with just managemant access does not have cli access.
+* User can setup mfa USB or Phone.
 
 #### Example Code
 
@@ -39,7 +40,7 @@
 
 * Policy can be added to users and groups.
 * Any Deny rules is the highest of approve.
-* You can assign more than one policy to a user or group
+* You can assign more than one policy to a user or group.
 
 ##### Example Code
 
@@ -64,3 +65,13 @@
   })
 }
 ```
+
+# Shared Responsibility Model
+
+When we talk about the shared responsibility model for any cloud provider they would have a smilar answer that all of the datacentres,hardware and networking is reailiably and secure.  When you start using the services on there platform of choice, then the user should be responsibility for the up keep of any resources deployed.
+
+That said all major cloud providers would have the tools to help in finding these issues and reporting them to you.  Again the tools would be at a price per hour.
+
+Below is a link i have found in regards to the Shared Responsibility Model which should help in understanding further this requirement.
+
+![Shared Responsibility Model](https://www.cloudpassage.com/articles/shared-responsibility-model-explained/)
