@@ -74,4 +74,4 @@ That said all major cloud providers would have the tools to help in finding thes
 
 Below is a link i have found in regards to the Shared Responsibility Model which should help in understanding further this requirement.
 
-![Shared Responsibility Model](https://www.cloudpassage.com/articles/shared-responsibility-model-explained/)
+[Shared Responsibility Model](https://www.cloudpassage.com/articles/shared-responsibility-model-explained/)
