@@ -35,6 +35,7 @@ This readme contains details around the exam, information around the exam and th
   - Create metric filters.
   - Create CloudWatch dashboards.
   - Configure notifications (for example, Amazon Simple Notification Service [Amazon SNS], Service Quotas, CloudWatch alarms, AWS Health events).
+
 * 1.2 Remediate issues based on monitoring and availability metrics
   - Troubleshoot or take corrective actions based on notifications and alarms
   - Configure Amazon EventBridge rules to trigger actions
