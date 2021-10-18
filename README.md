@@ -22,7 +22,6 @@
 ## Table of Contents
 
 - [About This Repo](#About-This-Repo)
-- [Azure](#getting-started)
 - [Amazon Web Services](#Amazon-Web-Services-Certification)
 - [Azure](#Azure-Certification)
 - [Google Cloud Platform](#Google-Cloud-Platform-Certification)
