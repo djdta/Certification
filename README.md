@@ -45,7 +45,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About This test
+## About This Repo
 
 <p align="center">
   <a href="">
