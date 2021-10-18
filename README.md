@@ -35,11 +35,11 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About This Repo
-Sample Text
+This repo is designed to help people with study guides that i have created overtime while studying certifications.  There also will be scripts to create these servers with terraform and cli tools i.e aws cli and azure cli as i am sure that there wil be questions around how to use the cli.
 
 
 # Azure Certification
-Here in this section you will find all the study guides i used to help me pass all the exams in azure.
+This section is dedicated to the azure exams that i have study guide for.
 
 
 # Amazon Web Services Certification
