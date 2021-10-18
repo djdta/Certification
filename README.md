@@ -27,7 +27,7 @@
 - [Amazon Web Services](#Amazon-Web-Services-Certification)
 - [Azure](#Azure-Certification)
 - [Google Cloud Platform](#Google-Cloud-Platform-Certification)
-- [Hashicorp](#Hashicorp Certification)
+- [Hashicorp](#Hashicorp-Certification)
 - [Contributing](#contributing)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
