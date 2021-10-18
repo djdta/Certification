@@ -27,7 +27,7 @@
 - [Amazon Web Services](#Amazon-Web-Services-Certification)
 - [Azure](#Azure-Certification)
 - [Google Cloud Platform](#Google-Cloud-Platform-Certification)
-- [Hashicorp](#Hashicorp)
+- [Hashicorp](#Hashicorp Certification)
 - [Contributing](#contributing)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
@@ -48,7 +48,7 @@ Here in this section you will find all the study guides i used to help me pass a
 # Google Cloud Platform Certification
 Here in this section you will find all the study guides i used to help me pass all the exams in google cloud platform certs.
 
-# Hashicorp
+# Hashicorp Certification
 Here in this section you will find all the study guides i used to help me pass all the exams in hashicorp certs.
 
 ## Contributing
