@@ -44,12 +44,12 @@ This section is dedicated to the azure exams that i have study guide for.
 ## Amazon Web Services Certification
 Here in this section you will find all the study guides i used to help me pass all the exams in aws certifications.
 
-- [Aws](https://github.com/djdta/Certification/blob/main/AWS/README.MD)
+- [Amazon Web Services](https://github.com/djdta/Certification/blob/main/AWS/README.MD)
 
 ## Google Cloud Platform Certification
 Here in this section you will find all the study guides i used to help me pass all the exams in google cloud platform certs.
 
-- [GCP](https://github.com/djdta/Certification/blob/main/GCP/README.MD)
+- [Google Cloud Platform](https://github.com/djdta/Certification/blob/main/GCP/README.MD)
 
 ## Hashicorp Certification
 Here in this section you will find all the study guides i used to help me pass all the exams in hashicorp certs.
