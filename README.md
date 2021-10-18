@@ -21,7 +21,6 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [About This Repo](#About-This-Repo)
 - [Azure](#getting-started)
 - [Amazon Web Services](#Amazon-Web-Services-Certification)
