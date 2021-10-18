@@ -38,18 +38,25 @@
 This repo is designed to help people with study guides that i have created overtime while studying certifications.  There also will be scripts to create these servers with terraform and cli tools i.e aws cli and azure cli as i am sure that there wil be questions around how to use the cli.
 
 
-# Azure Certification
+## Azure Certification
 This section is dedicated to the azure exams that i have study guide for.
 
+- [Azure](https://github.com/djdta/Certification/blob/main/Azure/README.MD)
 
-# Amazon Web Services Certification
+## Amazon Web Services Certification
 Here in this section you will find all the study guides i used to help me pass all the exams in aws certifications.
 
-# Google Cloud Platform Certification
+- [Aws](https://github.com/djdta/Certification/blob/main/Azure/README.MD)
+
+## Google Cloud Platform Certification
 Here in this section you will find all the study guides i used to help me pass all the exams in google cloud platform certs.
 
-# Hashicorp Certification
+- [GCP](https://github.com/djdta/Certification/blob/main/Azure/README.MD)
+
+## Hashicorp Certification
 Here in this section you will find all the study guides i used to help me pass all the exams in hashicorp certs.
+
+- [Hashicorp](https://github.com/djdta/Certification/blob/main/Azure/README.MD)
 
 ## Contributing
 
