@@ -30,3 +30,4 @@ override.tf.json
 # example: *tfplan*
 workspace.code-workspace
 
+.DS_Store

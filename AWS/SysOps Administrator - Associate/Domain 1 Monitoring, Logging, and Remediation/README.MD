@@ -72,6 +72,4 @@ For any help and feedback please feel free to reach out to the following
 <!-- ACKNOWLEDGEMENTS -->
 
 # Acknowledgements
-
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - stiliajohny.github.io
