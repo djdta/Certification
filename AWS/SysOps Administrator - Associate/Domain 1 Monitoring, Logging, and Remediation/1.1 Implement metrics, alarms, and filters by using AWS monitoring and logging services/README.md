@@ -27,3 +27,7 @@ Cloudwatch is a managed platform for any Metrics and logs for any AWS resouces t
 
 TODO:
 - Example of Webserver and
+
+
+# Notes
+ For logging /aws is reserved, if you try to create something like this it would error out.

@@ -132,3 +132,4 @@ resource "aws_autoscaling_group" "example_mixed" {
 }
 
 
+#TODO:auto scaling policy
