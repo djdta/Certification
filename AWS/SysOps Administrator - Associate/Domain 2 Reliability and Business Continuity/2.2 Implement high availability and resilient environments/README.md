@@ -33,4 +33,4 @@ Here below is some of the feature a load balancer with high availability can giv
 
 Example of a Loadbalancer in HA use case.
 
-![Load Balancer Use Case](./aws/../LoadBalancer.png)
+![Load Balancer Use Case](/AWS/.assets/LoadBalancer.png)
