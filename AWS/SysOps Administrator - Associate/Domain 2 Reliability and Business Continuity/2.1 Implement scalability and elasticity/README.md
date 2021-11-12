@@ -5,6 +5,7 @@ For use of the code example please make sure you following the link below
 
 [Requirements](https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/certification-associate-tutorials)
 
+---
 
 ## Capacity Planning
 - Expectation
