@@ -31,3 +31,4 @@ override.tf.json
 workspace.code-workspace
 
 .DS_Store
+AWS/.assets/Cloudfront.drawio

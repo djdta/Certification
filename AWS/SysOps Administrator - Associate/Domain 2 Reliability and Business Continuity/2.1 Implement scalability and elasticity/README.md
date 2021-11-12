@@ -100,3 +100,22 @@ Things  to consider when doing this and for the exam are the following bullet po
 #### AWS Cli Examples
 - [RDS Deployment AWS Cli](Template)
 - [Amazon Aurora Deployment Terraform](Template)
+
+## AWS Caching Services
+The caching service has been designed for performance with the following features.
+
+- Temporary storage for frequently accessed data.
+- Application that require less processing power.
+- Lower costs by requiring a smaller sizes
+
+These features can be used with the following AWS services Cloudfront, Redis Elasticache and DynamoDB Accelerator DX
+
+### Cloudfront
+- Caches static and dynamic content for web applications.
+- Content Delivery Network with multi tier cache options.
+- Over 200 Edge locations for hosting
+- Servers Web Application quick was low latency.
+
+Example of a cloudfront use case.
+
+![Cloudfront Use Case](/AWS/.assets/Cloudfront.png)
