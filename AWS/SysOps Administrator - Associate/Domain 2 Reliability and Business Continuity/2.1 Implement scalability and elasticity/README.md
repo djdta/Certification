@@ -34,10 +34,10 @@ For use of the code example please make sure you following the link below
 [AWS Cli Code](Template)
 
 ## Autoscaling Polices
-The use of having autoscale polices is to do manually adjusts the minimum, maximum or the desired capacity values.  It also automatically adjust base on *** metrics *** think cloudwatch :) 
+The use of having autoscale polices is to do manually adjusts the minimum, maximum or the desired capacity values.  It also automatically adjust base on **metrics** think cloudwatch :) 
 
 - Target Tracking will auto scaling you target values. 
-- Simple Auto scaling acts on cloudwatch *** alarms *** think cloudwatch :) 
+- Simple Auto scaling acts on cloudwatch **alarms** think cloudwatch :) 
 -  Step Scaling Auto scaling acts based on banded values ranges.
 
 Example IAC for Autoscaling Polices
@@ -129,7 +129,7 @@ The feature of the caching services are as follows:
 
 - Caching Layers to avoid duplication of real requests.
 - In Memory Cached Managed.
-- DAX *** Amazon DynamoDB Accelerator *** should be used in front of your DynamoDB table.
+- DAX **Amazon DynamoDB Accelerator** should be used in front of your DynamoDB table.
 
 #### Example Code
 [Amazon DynamoDB Accelerator DAX Deployment Terraform ]()
