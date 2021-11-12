@@ -92,3 +92,19 @@ This service is designed for windows instances to connect to a windows share run
 ### Example Rout53 health check
 - [Rout53 health check Terraform](Template)
 - [Rout53 health check AWS Cli](Template)
+
+## Route53 Routing Configurations
+- Production ready infrastructure in different regions
+- Simple Single Resource, Single Region
+- Active - Active Availble in a second region
+- Active - Passive Stand-by infrastructure region .
+
+## Route53 Routing Polices
+- Weight
+  - Numeric propotion of traffic to route to the aws resource.
+- Latencey
+  - Routes traffic based on latency for th e users region
+- GeoLocation
+  - Routes traffic to the users location
+- Latencey and Geolocation
+  - Records will determine a users ip by location
