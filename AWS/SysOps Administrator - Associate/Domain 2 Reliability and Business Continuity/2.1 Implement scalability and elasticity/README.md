@@ -94,7 +94,7 @@ Things  to consider when doing this and for the exam are the following bullet po
 ### Example RDS Deployment
 
 #### Terraform Code Examples
-- [ RDS Deployment Terraform](https://github.com/djdta/Certification/tree/aws-updates/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/2.1%20Implement%20scalability%20and%20elasticity/Auto%20Scale/Aurora%20rds))
+[ RDS Deployment Terraform](https://github.com/djdta/Certification/tree/aws-updates/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/2.1%20Implement%20scalability%20and%20elasticity/Auto%20Scale/Aurora%20rds))
 
 #### AWS Cli Examples
 [RDS Deployment AWS Cli](Template)
