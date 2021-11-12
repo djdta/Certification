@@ -34,3 +34,7 @@ Here below is some of the feature a load balancer with high availability can giv
 Example of a Loadbalancer in HA use case.
 
 ![Load Balancer Use Case](/AWS/.assets/LoadBalancer.png)
+
+### Example LoadBalancer with HA
+- [LoadBalancer HA Deployment Terraform]([Template](https://github.com/djdta/Certification/tree/master/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/2.2%20Implement%20high%20availability%20and%20resilient%20environments/Load%20Balancer))
+- [LoadBalancer HA Deployment AWS Cli](Template)
