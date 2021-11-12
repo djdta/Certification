@@ -138,6 +138,10 @@ The feature of the caching services are as follows:
 ## Amazon Elasticache
 This is a manged service for amazon which provides managed service cached for your web applications and Database.  This service is a combination of memcached and redis combined.
 
+- AWS Managed Cached service and all versions of redis and memcached.
+- Memcached Fast multi threaded and designed for simplicity.
+- Redis Supports snapshots replications and transactions.
+
 Example of a Elasticache use case.
 
 ![Elasticache Use Case](/AWS/.assets/Elasticache.png)
