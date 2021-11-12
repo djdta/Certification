@@ -62,7 +62,7 @@ This is Multi AZ RDS Deployment has the following benefits for scale and High Av
 - [Multi AZ RDS Deployment AWS Cli](Template)
 
 ## Amazon Elastic File System
-This service is a managed service by amazon which host share folders for ec2 machine.  Here below is the feature that are used.
+This service is a managed service by amazon which host share folders for ec2 instances.  Here below is the feature that are used.
 
 - Managed network file system.
 - Replace for the traditional files servers.
@@ -70,3 +70,14 @@ This service is a managed service by amazon which host share folders for ec2 mac
 - Share across EC2 instances.
 - Standard Storage for HA
 - One Zone Option with this option you may incur charges.
+
+## Amazon FSx for Windows File Server
+This service is designed for windows instances to connect to a windows share running in AWS which is managed by AWS.  Here below is some of the feature to be aware.
+
+- Fully managed file storage with SMB protocol support
+- Can choose between a single AZ or Multi AZ deployments.
+- Specify preferred and standby of availability zones
+
+### Example FSx for Windows File Server
+- [FSxDeployment Terraform](Template)
+- [FSx Deployment AWS Cli](Template)
