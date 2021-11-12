@@ -1,4 +1,11 @@
 # With Latest Version Of Launch Template
+
+# TODO: Revamp the terraform code and aws cli commands also
+# Create a launch template
+# Create a EC2 autoscaling group
+
+#TODO:auto scaling policy
+
 resource "aws_launch_template" "foobar" {
   name_prefix   = "foobar"
   image_id      = "ami-096cb92bb3580c759"
@@ -132,4 +139,3 @@ resource "aws_autoscaling_group" "example_mixed" {
 }
 
 
-#TODO:auto scaling policy
