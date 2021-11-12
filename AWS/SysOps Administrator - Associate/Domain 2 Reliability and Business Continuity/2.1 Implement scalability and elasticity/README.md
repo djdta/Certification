@@ -119,3 +119,25 @@ These features can be used with the following AWS services Cloudfront, Redis Ela
 Example of a cloudfront use case.
 
 ![Cloudfront Use Case](/AWS/.assets/Cloudfront.png)
+
+#### Example Code
+[Cloudfront Deployment Terraform ]()
+[Cloudfront Deployment AWS Cli ]()
+
+## Amazon DynamoDB Accelerator DAX
+The feature of the caching services are as follows:
+
+- Caching Layers to avoid duplication of real requests.
+- In Memory Cached Managed.
+- DAX *** Amazon DynamoDB Accelerator *** should be used in front of your DynamoDB table.
+
+#### Example Code
+[Amazon DynamoDB Accelerator DAX Deployment Terraform ]()
+[Amazon DynamoDB Accelerator DAX Deployment AWS Cli ]()
+
+## Amazon Elasticache
+This is a manged service for amazon which provides managed service cached for your web applications and Database.  This service is a combination of memcached and redis combined.
+
+Example of a Elasticache use case.
+
+![Elasticache Use Case](/AWS/.assets/Elasticache.png)
