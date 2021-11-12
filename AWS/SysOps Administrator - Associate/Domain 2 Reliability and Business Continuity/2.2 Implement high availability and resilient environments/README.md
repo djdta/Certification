@@ -38,3 +38,8 @@ Example of a Loadbalancer in HA use case.
 ### Example LoadBalancer with HA
 - [LoadBalancer HA Deployment Terraform](https://github.com/djdta/Certification/tree/master/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/2.2%20Implement%20high%20availability%20and%20resilient%20environments/Load%20Balancer)
 - [LoadBalancer HA Deployment AWS Cli](Template)
+
+## Self Healing with Autoscaling
+Using self healing with auto scaling groups to sel heal any issus.  Here below is a use case and code of you to test and play.
+
+![Self Healing  Use Case](/AWS/.assets/AWS-Certified_Sysops-Administrator_Associate.png)
