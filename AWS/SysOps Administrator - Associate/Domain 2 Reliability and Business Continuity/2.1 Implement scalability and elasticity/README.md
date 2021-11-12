@@ -145,3 +145,12 @@ This is a manged service for amazon which provides managed service cached for yo
 Example of a Elasticache use case.
 
 ![Elasticache Use Case](/AWS/.assets/Elasticache.png)
+
+### Example Code Memcached
+
+[Elasticache Deployment Terraform ](Template)
+[Elasticache Deployment AWS Cli ](Template)
+
+### Example Code Redis
+[Redis Deployment Terraform ](Template)
+[Redis Deployment AWS Cli ](Template)
