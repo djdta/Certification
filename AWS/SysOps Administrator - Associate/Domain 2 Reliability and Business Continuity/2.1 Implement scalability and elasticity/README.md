@@ -23,9 +23,10 @@
 - Use of AZ
 - Health checks can be performed on instances.
 
-Example IAC
+### Terraform Code Examples: 
 [Terraform Code](https://github.com/djdta/Certification/tree/main/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/Auto%20Scale/EC2)
 
+### AWS Cli Examples
 [AWS Cli Code](Template)
 
 ## Autoscaling Polices
@@ -48,7 +49,7 @@ Example IAC for Autoscaling Polices
 
 ## Example Scaling polices:
 
-### Terraform Code Examples: 
+### Terraform Code Examples
 - [Target Tracking Code Terraform](Template)
 - [Simple Code Terraform](Template)
 - [Step Scaling Terraform](Template)
