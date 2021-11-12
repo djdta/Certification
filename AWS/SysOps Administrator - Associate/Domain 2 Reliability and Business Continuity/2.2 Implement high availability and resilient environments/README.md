@@ -30,3 +30,7 @@ Here below is some of the feature a load balancer with high availability can giv
 - Secuirty user authentication and WAF
 - Cross zone load balancing
 - Elastic load balancer is a regional service.
+
+Example of a Loadbalancer in HA use case.
+
+![Load Balancer Use Case]()
