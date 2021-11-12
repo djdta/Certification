@@ -79,5 +79,16 @@ This service is designed for windows instances to connect to a windows share run
 - Specify preferred and standby of availability zones
 
 ### Example FSx for Windows File Server
-- [FSxDeployment Terraform](Template)
+- [FSx Deployment Terraform](Template)
 - [FSx Deployment AWS Cli](Template)
+
+## Route53 Health Checks
+- Endpoints must be heathy to receive traffic.
+- Monitor by IP or Domain Name.
+- HTTP, HTTPS and TCP Traffic.
+- Requests can be sent upto 8 different regions.
+- Route53 Alias records can automatically evaluate target heath.
+
+### Example Rout53 health check
+- [Rout53 health check Terraform](Template)
+- [Rout53 health check AWS Cli](Template)
