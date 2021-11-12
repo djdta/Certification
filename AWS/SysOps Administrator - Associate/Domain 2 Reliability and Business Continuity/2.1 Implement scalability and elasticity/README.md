@@ -64,3 +64,21 @@ Example IAC for Autoscaling Polices
 - [Simple Code AWS Cli](Template)
 - [Step Scaling AWS Cli](Template)
 - [Schedule Action AWS Cli](Template)
+
+## AWS Autoscaling Plans
+With autoscaling plans there are many features that this can be used, here below are some of the features.
+
+  - EC2 Services, EC2 spot fleets and Aurora Replicas
+  - Automatic scaling of resources for applications running in aws.
+  - Can use a specified cloud formation stack in aws.
+  - Discover scalable resource with the use of tags.
+  - Can use one or more EC2 autoscaling groups.
+  - Dynamic and Predicted scaling options.
+  - 
+ ## Example Autoscaling Plans:
+
+#### Terraform Code Examples
+[Autoscaling Plans](Template)
+
+#### AWS Cli Examples
+[Autoscaling Plans](Template)
