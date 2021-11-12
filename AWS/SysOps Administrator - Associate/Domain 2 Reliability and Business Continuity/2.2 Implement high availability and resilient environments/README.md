@@ -43,3 +43,7 @@ Example of a Loadbalancer in HA use case.
 Using self healing with auto scaling groups to sel heal any issus.  Here below is a use case and code of you to test and play.
 
 ![Self Healing  Use Case](Template)
+
+### Example Self Healing
+- [Self Healing Deployment Terraform](Template)
+- [Self Healing Deployment AWS Cli](Template)
