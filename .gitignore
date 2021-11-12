@@ -33,3 +33,4 @@ workspace.code-workspace
 .DS_Store
 AWS/.assets/Cloudfront.drawio
 AWS/SysOps Administrator - Associate/Domain 2 Reliability and Business Continuity/2.1 Implement scalability and elasticity/Elasticache.drawio
+AWS/.assets/LoadBalancer.drawio
