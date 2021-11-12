@@ -82,3 +82,11 @@ With autoscaling plans there are many features that this can be used, here below
 
 #### AWS Cli Examples
 [Autoscaling Plans AWS Cli](Template)
+
+## Scaling RDS Deployment
+Things  to consider when doing this and for the exam are the following bullet points:
+
+- Scale Up by changing instance class.
+- Storage for IOPS.
+- Adding read Replicas for performance.
+- Increase in performance for read operations. 
