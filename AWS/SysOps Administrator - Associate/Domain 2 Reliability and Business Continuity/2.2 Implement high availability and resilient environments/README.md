@@ -60,3 +60,13 @@ This is Multi AZ RDS Deployment has the following benefits for scale and High Av
 ### Example Multi AZ RDS Deployment
 - [Multi AZ RDS Deployment Terraform](Template)
 - [Multi AZ RDS Deployment AWS Cli](Template)
+
+## Amazon Elastic File System
+This service is a managed service by amazon which host share folders for ec2 machine.  Here below is the feature that are used.
+
+- Managed network file system.
+- Replace for the traditional files servers.
+- NFS is supported.
+- Share across EC2 instances.
+- Standard Storage for HA
+- One Zone Option with this option you may incur charges.
