@@ -114,7 +114,7 @@ For use of the auto scaling, the default should be used which is target tracking
 
 *** 
 
-* Auto scaling on demand feature is not availble.
+* Auto scaling on demand feature is not available.
 
 * RDS autoscaling plan will create a read database which looks somethin like this.
 `application-autoscaling-uid number`
