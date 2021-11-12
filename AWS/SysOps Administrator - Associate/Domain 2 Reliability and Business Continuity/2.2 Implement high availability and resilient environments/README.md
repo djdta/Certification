@@ -47,3 +47,16 @@ Using self healing with auto scaling groups to sel heal any issus.  Here below i
 ### Example Self Healing
 - [Self Healing Deployment Terraform](Template)
 - [Self Healing Deployment AWS Cli](Template)
+
+## Multi AZ RDS Deployments
+This is Multi AZ RDS Deployment has the following benefits for scale and High Availability.
+
+- Spans over 2 availability zones.
+- Can convert a non multi AZ deployment.
+- RDS maintains a synchronous standby replica
+- Automattic Failover
+- One Single DNS endpoint to connect to.
+
+### Example Multi AZ RDS Deployment
+- [Multi AZ RDS Deployment Terraform](Template)
+- [Multi AZ RDS Deployment AWS Cli](Template)
