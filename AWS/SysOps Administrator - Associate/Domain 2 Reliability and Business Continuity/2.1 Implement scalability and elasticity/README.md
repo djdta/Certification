@@ -5,8 +5,6 @@ For use of the code example please make sure you following the link below
 
 [Requirements](https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/certification-associate-tutorials)
 
----
-
 ## Capacity Planning
 - Expectation
 - Too Much capacity
@@ -14,7 +12,6 @@ For use of the code example please make sure you following the link below
 - Auto Scaling
 
 ## Horizontal scaling / Vertical Scaling
-
 - Horizontal scaling (Scaling out) i.e having more of the same tier.
 - Vertical Scaling (Scaling Up) i.e Increasing the tier for more performance.
 
@@ -30,10 +27,10 @@ For use of the code example please make sure you following the link below
 - Use of AZ
 - Health checks can be performed on instances.
 
-### Terraform Code Examples: 
+#### Terraform Code Examples: 
 [Terraform Code](https://github.com/djdta/Certification/tree/main/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/Auto%20Scale/EC2)
 
-### AWS Cli Examples
+#### AWS Cli Examples
 [AWS Cli Code](Template)
 
 ## Autoscaling Polices
