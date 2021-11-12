@@ -74,7 +74,7 @@ With autoscaling plans there are many features that this can be used, here below
   - Discover scalable resource with the use of tags.
   - Can use one or more EC2 autoscaling groups.
   - Dynamic and Predicted scaling options.
-  - 
+
  ## Example Autoscaling Plans:
 
 #### Terraform Code Examples
