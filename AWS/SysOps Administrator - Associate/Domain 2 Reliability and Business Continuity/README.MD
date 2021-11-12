@@ -122,20 +122,6 @@ For use of the auto scaling, the default should be used which is target tracking
 
 Serverless mode of the auto scaling this would automanictly scale base on the capcity needs and change it when need.
 
-## Load Balancer
-
-Application
-* Layer 7 load balancing HTTP / HTTPS
-* Server Name Indication
-* IP Address as targets
-* Lamda Functions as targets
-* Host / Path based routing
-* Containerzied application support
-* Sticky sessions support (Maintain client connection to the server)
-* Secuirty user authentication and WAF
-* cross zone load balancing
-* Elastic load balancer is a regional service.
-
 Example terraform code is the Load Balancer folder for view. To deploy the load balancer make sure the flag is set before running
 
 <b> Application_Load_Balancer = true </b>
