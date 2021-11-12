@@ -1,12 +1,9 @@
 # Domain 2 Reliability and Business Continuity notes
 
 *** Requirements ***
-For use of the code example please make sure you have the following installed.
+For use of the code example please make sure you following the link below
 
-* Terraform installed on a linux box.
-* AWS Cli
-* AWS account (They are free to setup) ;)
-* IAM Permission setup for terraform.  Link below to set this up.
+[Requirements](https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/certification-associate-tutorials)
 
 
 ## Capacity Planning
