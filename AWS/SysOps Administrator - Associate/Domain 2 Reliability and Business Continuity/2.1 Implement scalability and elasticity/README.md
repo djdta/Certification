@@ -53,13 +53,13 @@ Example IAC for Autoscaling Polices
 
 ## Example Scaling polices:
 
-### Terraform Code Examples
+#### Terraform Code Examples
 - [Target Tracking Code Terraform](Template)
 - [Simple Code Terraform](Template)
 - [Step Scaling Terraform](Template)
 - [Schedule Action Terraform code](Template)
 
-### AWS Cli Examples
+#### AWS Cli Examples
 - [Target Tracking Code AWS Cli](Template)
 - [Simple Code AWS Cli](Template)
 - [Step Scaling AWS Cli](Template)
