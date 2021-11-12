@@ -78,7 +78,7 @@ With autoscaling plans there are many features that this can be used, here below
  ## Example Autoscaling Plans:
 
 #### Terraform Code Examples
-[Autoscaling Plans](Template)
+[Autoscaling Plans Terraform](Template)
 
 #### AWS Cli Examples
-[Autoscaling Plans](Template)
+[Autoscaling Plans AWS Cli](Template)
