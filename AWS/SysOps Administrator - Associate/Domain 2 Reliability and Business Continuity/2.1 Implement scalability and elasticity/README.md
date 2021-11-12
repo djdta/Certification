@@ -51,7 +51,7 @@ Example IAC for Autoscaling Polices
 - Cron expressions for recurrence pattern
 - Time and Dates can be used.
 
-## Example Scaling polices:
+### Example Scaling polices:
 
 #### Terraform Code Examples
 - [Target Tracking Code Terraform](Template)
@@ -75,7 +75,7 @@ With autoscaling plans there are many features that this can be used, here below
   - Can use one or more EC2 autoscaling groups.
   - Dynamic and Predicted scaling options.
 
- ## Example Autoscaling Plans:
+ ### Example Autoscaling Plans:
 
 #### Terraform Code Examples
 [Autoscaling Plans Terraform](Template)
