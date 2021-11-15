@@ -36,19 +36,6 @@ Also below there different on how to use the auto scaling what it can be used fo
 
 In order for making sure that auto scaling and auto scal plans are working to how you want. You can use the following tool in order to see what happens when stress it been put on the system.
 
-
-
-## Application Auto Scaling
-
-
-With application auto scaling as is base around the following elements 
-
-* spot fleets (EC2 Instances)
-* dyno db ( Database )
-* ecs containers ( EC2 Instances)
-
-The above and based aws resources which can be used to do application auto scale and create auto scale plans also along with this you do you have ablilty with the cloudwatch logs to help the auto scale decide to scale it performance has been maxed out.
-
 ## AWS Auto Scaling
 
 

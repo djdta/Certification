@@ -50,11 +50,11 @@ Here below is a example of a cloudformation template.
 ```
 JSON code
 ```
-* Parameters
-* Mappings
-* Conditions
-* Resources
-* Outputs
+* Parameters: Username and or Password
+* Mappings: Example key = Region, Value = us-west-2
+* Conditions: Check if any environment has been deployed.
+* Resources: i.e EC2 instances. S3 Bucket.
+* Outputs: Security ids
 
 
 ### Cloudformation YAML Example.
