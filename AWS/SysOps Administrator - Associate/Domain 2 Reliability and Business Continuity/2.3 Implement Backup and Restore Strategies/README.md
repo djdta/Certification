@@ -182,3 +182,21 @@ Here below is the lifecycle option for different S3 buckets and tiers.
 - Zero Downtime
 - Near zero Loss.
 - Mission Critical Services.
+
+## Troubleshooting
+- Always Test database recovery paths
+- Test recovery paths with ALB and Auto Scaling Groups.
+
+### Health Checks
+- Liveness Checks
+- Local Health Checks
+- Dependency Health Checks
+- Anomaly Detections
+
+## Drift
+
+### AWS Config
+- Continuously monitoring changes on aws resources.
+- Tracks Relationships and dependencies with resources.
+- Can trigger AWS System Manager raise a alarm and fix the drift.
+- Cloudformation can detect drift in the a cloud formation stack.
