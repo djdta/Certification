@@ -108,3 +108,9 @@ This service is designed for windows instances to connect to a windows share run
   - Routes traffic to the users location
 - Latencey and Geolocation
   - Records will determine a users ip by location
+
+### Example Route53 Routing Polices
+- [Route53 Routing Polices Terraform](Template)
+- [Route53 Routing Polices AWS Cli](Template)
+
+For any outage please remove any loadbalancers
