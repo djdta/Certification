@@ -130,6 +130,55 @@ Here below is the lifecycle option for different S3 buckets and tiers.
 - Object need to be in a bucket for 30 days before transitioned.
 - Cannot transition from any storage to S3 standard storage.
 
- ### Example S3 Lifecycle
+### Example S3 Lifecycle
 - [S3 Lifecycle Terraform](Template)
 - [S3 Lifecycle AWS Cli](Template)
+
+## Cross Region Replication
+- Data is closer to the user.
+- Data is closer to compute.
+- Compliance and Governance reasons.
+- Objects added to bucket will be replicated.
+- Objects metadata and tags.
+- Objects where bucket owner has read and access control list. **ACL**
+- Objects are encrypted at rest under Amazon managed keys (SSE-S3) **Server Side encryption** or **customer master keys** (CMKs) stored in AWS **Key Management Service** (SSE-KMS)
+
+### Things that do not get Replicated.
+- Object existing before replication was enabled.
+- Objects where the owner does not have premissions.
+- Object stored in S3 Glacier or S3 Deep Glacier.
+- Objects created with server side encryption using customer private encryption keys.(SSE-C).
+
+### Example S3 Replication
+- [S3 Replication Terraform](Template)
+- [S3 Replication AWS Cli](Template)
+
+## Disaster and Recovery
+
+### Backup and Restore
+- RTO / RPO Hours
+- Cost $
+- Low priority use cases.
+- Restore Data after the event.
+- Deploy resources after the fact.
+
+### Pilot Light
+- RTO / RPO Tens of Minutes
+- Cost $$
+- Less stringent on RTO / RPO
+- Core Services
+- Starts and scales resources after the event.
+
+### Warm Standby
+- RPO / RTO Minutes
+- Cost $$$
+- More stringent on RTO / RPO
+- Business Critical Services
+- Scales resources after the event.
+
+### Active / Active
+- RTO / RPO Real Time
+- Cost $$$$
+- Zero Downtime
+- Near zero Loss.
+- Mission Critical Services.
