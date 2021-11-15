@@ -151,8 +151,8 @@ Example of a cloudfront use case.
 ![Cloudfront Use Case](/AWS/.assets/Cloudfront.png)
 
 #### Example Code
-[Cloudfront Deployment Terraform ]()
-[Cloudfront Deployment AWS Cli ]()
+[Cloudfront Deployment Terraform ](Template)
+[Cloudfront Deployment AWS Cli ](Template)
 
 ## Amazon DynamoDB Accelerator DAX
 The feature of the caching services are as follows:
