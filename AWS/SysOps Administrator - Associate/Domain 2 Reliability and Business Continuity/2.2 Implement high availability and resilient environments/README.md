@@ -101,12 +101,12 @@ This service is designed for windows instances to connect to a windows share run
 
 ## Route53 Routing Polices
 - Weight
-  - Numeric propotion of traffic to route to the aws resource.
-- Latencey
+  - Numeric proportion of traffic to route to the aws resource.
+- Latency
   - Routes traffic based on latency for th e users region
 - GeoLocation
   - Routes traffic to the users location
-- Latencey and Geolocation
+- Latency and Geolocation
   - Records will determine a users ip by location
 
 ### Example Route53 Routing Polices

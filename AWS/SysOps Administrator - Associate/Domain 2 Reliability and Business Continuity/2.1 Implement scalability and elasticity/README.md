@@ -1,4 +1,4 @@
-# Domain 2 Reliability and Business Continuity notes
+# 2.1 Implement scalability and elasticity
 
 *** Requirements ***
 For use of the code example please make sure you following the link below
@@ -15,20 +15,50 @@ For use of the code example please make sure you following the link below
 - Horizontal scaling (Scaling out) i.e having more of the same tier.
 - Vertical Scaling (Scaling Up) i.e Increasing the tier for more performance.
 
+### Vertical Scaling
+Vertical Scaling this is used for more performance driven task.  A list below are a few examples as to way this would be need.  Also using this type of scaling to increase cost
+
+* <b> Web Applications ( EC2 Machine )</b>
+* <b> Database Usage ( RDS ) </b>
+* <b> ECS Container Registry (EC2 Machines) </b> 
+
+To mention that vertical scaling works as the table shows the following
+
+Upscaling **t2.mirco ===================> m5.large**
+
+Descaling **m5.large ===================> t2.mirco**
+
+## Horizontal Scaling
+Horizontal Scaling is different in the way it works around scaling resources in your aws accounts.  This works in a fashion of setup an nginx asg group with ec2 instances and what will happen is that base off proformance it will scale accross the same instances never increase tiers, but will still increase cost as this will be running 2 instances instead of one.  Below is a example of how it works.
+
+Upscaling **t2.micro ==================> t2.micro**
+
+Descaling **t2.micro ==================> t2.micro**
+
+
 ## Launch Templates
 - Recommended over launched templates.
 - Version control templates.
 - More advance options.
 - Allow mixing class and instance types.
+- Can work with on demand or spot instances.
+- Can attached a IAM role for added security controls.
+- Enable cloudwatch for monitoring and logging.
+- From the advance setting you can add user-data, ip address, RamDisk, KernalId.
 
 ## EC2 Auto Scaling Groups
 - Right Sizing Capacity needs.
 - Logical collections of instances.
 - Use of AZ
 - Health checks can be performed on instances.
+- Auto Scale can been triggered by manual operation.
+- Auto Scale can been dynamic which agin depends on performance of cpu, memory
+- Auto scale can be schedule at times of most peak i.e in the morning when people are logging in.
 
 #### Terraform Code Examples: 
 [Terraform Code](https://github.com/djdta/Certification/tree/main/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/Auto%20Scale/EC2)
+
+`stress test tool`
 
 #### AWS Cli Examples
 [AWS Cli Code](Template)

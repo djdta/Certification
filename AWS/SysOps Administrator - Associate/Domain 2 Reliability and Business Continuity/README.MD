@@ -1,7 +1,7 @@
 # High Availability Objective
 
 ### Summary
-For High Availiablity auto scaling are used for different resources from ec2 machine, rds, and ecs containers.  With the following sections we talk about why high availiabilty is a critical to any resources that supports auto scaling.  With this there is some consideration around the cost and how the scaling plan and policies.  In the following study guide the sections:
+For High Availability auto scaling are used for different resources from ec2 machine, rds, and ecs containers.  With the following sections we talk about why high availability is a critical to any resources that supports auto scaling.  With this there is some consideration around the cost and how the scaling plan and policies.  In the following study guide the sections:
 
 * Health monitoring
 
@@ -21,36 +21,6 @@ For High Availiablity auto scaling are used for different resources from ec2 mac
 
 * Application Auto Scaling
 
-### Vertical Scaling
-
-
-Vertical Scaling this is used for more performance driven task.  A list below are a few examples as to way this would be need.  Also using this type of scaling to increase cost
-
-* <b> Web Applications ( EC2 Machine )</b>
-* <b> Database Usage ( RDS ) </b>
-* <b> ECS Container Registry (EC2 Machines) </b> 
-
-To mention that vertical scaling works as the table shows the following
-
-
-
-Upscaling **t2.mirco ===================> m5.large**
-
-Descaling **m5.large ===================> t2.mirco**
-
-
-## Horizontal Scaling
-
-
-Horizontal Scaling is different in the way it works around scaling resources in your aws accounts.  This works in a fashion of setup an nginx asg group with ec2 instances and what will happen is that base off proformance it will scale accross the same instances never increase tiers, but will still increase cost as this will be running 2 instances instead of one.  Below is a example of how it works.
-
-Upscaling **t2.mirco ==================> t2.mirco**
-
-Descaling **t2.mirco ==================> t2.mirco**
-
-In the above tables you can see the upscaling and down scaling is always doing the same instance type i.e using a t2.micro in the asg. 
-
-Also there is a terraform code in this repo which you can use.
 
 
 ## Launch Config
@@ -58,23 +28,15 @@ Also there is a terraform code in this repo which you can use.
 
 With the launch config you can set the <b>launch config</b> for the auto scaling is going to work.  Below there is a list of pros and cons to this and something to be aware for the exam.
 
-* Can work with on demand or spot instances.
-* Can attached a IAM role for added secuirty controls.
-* Enable cloudwatch for montioring and logging.
-* From the advance setting you can add user-data, ip address, RamDisk, KernalId.
-
 Also there is a terraform use if you would like to try this.
 
 With the predivce scaling this is based on ML which is take of time if this needs to scale best on peformance of what you are running.
 
 Also below there different on how to use the auto scaling what it can be used for
-* Auto Scale can been triggered by manual opertion.
-* Auto Scale can been dymanic which agin depends on performance of cpu, memory 
-* Auto scale can be schedule at times of most peak i.e in the morning when people are logging in.
 
 In order for making sure that auto scaling and auto scal plans are working to how you want. You can use the following tool in order to see what happens when stress it been put on the system.
 
-`stress test tool`
+
 
 ## Application Auto Scaling
 
