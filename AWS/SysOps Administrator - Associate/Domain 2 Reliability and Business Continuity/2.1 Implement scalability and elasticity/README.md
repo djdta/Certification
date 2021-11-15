@@ -55,13 +55,11 @@ Descaling **t2.micro ==================> t2.micro**
 - Auto Scale can been dynamic which agin depends on performance of cpu, memory
 - Auto scale can be schedule at times of most peak i.e in the morning when people are logging in.
 
-#### Terraform Code Examples: 
-[Terraform Code](https://github.com/djdta/Certification/tree/main/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/Auto%20Scale/EC2)
+#### Code Examples: 
+- [Terraform Code](https://github.com/djdta/Certification/tree/main/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/Auto%20Scale/EC2)
+- [AWS Cli Code](Template)
 
 `stress test tool`
-
-#### AWS Cli Examples
-[AWS Cli Code](Template)
 
 ## Autoscaling Polices
 The use of having autoscale polices is to do manually adjusts the minimum, maximum or the desired capacity values.  It also automatically adjust base on **metrics** think cloudwatch :) 
@@ -70,7 +68,7 @@ The use of having autoscale polices is to do manually adjusts the minimum, maxim
 - Simple Auto scaling acts on cloudwatch **alarms** think cloudwatch :) 
 -  Step Scaling Auto scaling acts based on banded values ranges.
 
-Example IAC for Autoscaling Polices
+#### Code Examples: 
 [Terraform Code](Template)
 [AWS Cli Code](Template)
 
@@ -88,8 +86,6 @@ Example IAC for Autoscaling Polices
 - [Simple Code Terraform](Template)
 - [Step Scaling Terraform](Template)
 - [Schedule Action Terraform code](Template)
-
-#### AWS Cli Examples
 - [Target Tracking Code AWS Cli](Template)
 - [Simple Code AWS Cli](Template)
 - [Step Scaling AWS Cli](Template)
@@ -107,11 +103,9 @@ With autoscaling plans there are many features that this can be used, here below
 
  ### Example Autoscaling Plans:
 
-#### Terraform Code Examples
-[Autoscaling Plans Terraform](Template)
-
-#### AWS Cli Examples
-[Autoscaling Plans AWS Cli](Template)
+#### Code Examples
+- [Autoscaling Plans Terraform](Template)
+- [Autoscaling Plans AWS Cli](Template)
 
 ## Scaling RDS Deployment
 Things  to consider when doing this and for the exam are the following bullet points:
@@ -126,8 +120,6 @@ Things  to consider when doing this and for the exam are the following bullet po
 #### Terraform Code Examples
 - [ RDS Deployment Terraform](https://github.com/djdta/Certification/tree/aws-updates/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/2.1%20Implement%20scalability%20and%20elasticity/Auto%20Scale/Aurora%20rds)
 - [Amazon Aurora Deployment Terraform](https://github.com/djdta/Certification/tree/aws-updates/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/2.1%20Implement%20scalability%20and%20elasticity/Auto%20Scale/Aurora%20rds)
-
-#### AWS Cli Examples
 - [RDS Deployment AWS Cli](Template)
 - [Amazon Aurora Deployment Terraform](Template)
 

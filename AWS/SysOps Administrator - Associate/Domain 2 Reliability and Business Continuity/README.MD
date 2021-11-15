@@ -21,11 +21,7 @@ For High Availability auto scaling are used for different resources from ec2 mac
 
 * Application Auto Scaling
 
-
-
 ## Launch Config
-
-
 With the launch config you can set the <b>launch config</b> for the auto scaling is going to work.  Below there is a list of pros and cons to this and something to be aware for the exam.
 
 Also there is a terraform use if you would like to try this.
@@ -37,8 +33,6 @@ Also below there different on how to use the auto scaling what it can be used fo
 In order for making sure that auto scaling and auto scal plans are working to how you want. You can use the following tool in order to see what happens when stress it been put on the system.
 
 ## AWS Auto Scaling
-
-
 With the Auto Scaling this is designed for creating and maintain scale plans.  For use of this would a couple of thing to consider and they are list in points below
 
 * Depencey for any autoscaling group, would be to use a lauch template and launch config
