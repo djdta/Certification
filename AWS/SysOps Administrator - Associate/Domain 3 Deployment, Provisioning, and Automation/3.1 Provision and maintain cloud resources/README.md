@@ -41,3 +41,17 @@ Some terms you my seen through the use of using cloudformation.
 - Creates, Updates and deletes stack across multiple regions and accounts
 ### Nested Stacks
 - Stacks created as part of other stacks.
+
+## Cloudformation Template
+Here below is a example of a cloudformation template.
+
+### JSON Example
+
+```
+Cloud formation JSON code
+```
+### YAML Example.
+
+```
+Cloud formation YAML code
+```
