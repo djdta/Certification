@@ -45,13 +45,20 @@ Some terms you my seen through the use of using cloudformation.
 ## Cloudformation Template
 Here below is a example of a cloudformation template.
 
-### JSON Example
+### Cloudformation JSON Example
 
 ```
-Cloud formation JSON code
+JSON code
 ```
-### YAML Example.
+* Parameters
+* Mappings
+* Conditions
+* Resources
+* Outputs
+
+
+### Cloudformation YAML Example.
 
 ```
-Cloud formation YAML code
+YAML code
 ```
