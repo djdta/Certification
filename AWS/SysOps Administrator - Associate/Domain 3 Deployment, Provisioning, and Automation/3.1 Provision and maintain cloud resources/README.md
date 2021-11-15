@@ -29,3 +29,15 @@ In order
 - All the remaining resources that was used.
 
 ## Cloudformation
+Some terms you my seen through the use of using cloudformation.
+
+### Stack
+- Collection of resource that are together as a group.
+### Template
+- A JSON or YAML file to describe a stack
+### Change Sets
+- Preview how proposed changes will impact resources.
+### Stack Sets
+- Creates, Updates and deletes stack across multiple regions and accounts
+### Nested Stacks
+- Stacks created as part of other stacks.
