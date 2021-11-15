@@ -37,6 +37,12 @@ Descaling **t2.micro ==================> t2.micro**
 
 
 ## Launch Templates
+With the launch config you can set the <b>launch config</b> for the auto scaling is going to work.  Below there is a list of pros and cons to this and something to be aware for the exam.
+
+-  predicted scaling this is based on ML which is take of time if this needs to scale best on performance of what you are running.
+
+In order for making sure that auto scaling and auto scale plans are working to how you want. 
+
 - Recommended over launched templates.
 - Version control templates.
 - More advance options.
@@ -58,6 +64,8 @@ Descaling **t2.micro ==================> t2.micro**
 #### Code Examples: 
 - [Terraform Code](https://github.com/djdta/Certification/tree/main/AWS/SysOps%20Administrator%20-%20Associate/Domain%202%20Reliability%20and%20Business%20Continuity/Auto%20Scale/EC2)
 - [AWS Cli Code](Template)
+
+You can use the following tool in order to see what happens when stress it been put on the system.
 
 `stress test tool`
 
