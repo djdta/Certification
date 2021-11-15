@@ -47,13 +47,13 @@ Here below is a list of backup services that can be used in order to backup and 
 This service is used only with EBS volumes.
 
 ### Example Data Lifecycle and Manager
-[Data Lifecycle and Manager Terraform](Template)
-[Data Lifecycle and Manager AWS Cli](Template)
+- [Data Lifecycle and Manager Terraform](Template)
+- [Data Lifecycle and Manager AWS Cli](Template)
 
 ### AWS Backup
 This is a service you need to enable which one you would like to use i.e S3 bucket,FSx.
 
 ### Example AWS Backup
-[AWS Backup Terraform](Template)
-[AWS Backup AWS Cli](Template)
+- [AWS Backup Terraform](Template)
+- [AWS Backup AWS Cli](Template)
 
