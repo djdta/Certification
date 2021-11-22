@@ -41,10 +41,10 @@ Leverages 'buildspec.yml' for customizations
 [AWS Commit](Template)
 
 ### Four Phases:
-Install
-Pre Build
-Build
-Post Build
+- Install
+- Pre Build
+- Build
+- Post Build
 
 ## AWS CodeDeploy - Concepts
 
