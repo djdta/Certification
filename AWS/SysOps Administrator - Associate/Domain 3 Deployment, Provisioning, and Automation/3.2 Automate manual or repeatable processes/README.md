@@ -1,18 +1,21 @@
 ## 3.2 Automate manual or repeatable processes
 
 Elastic Beanstalks
-* Serverd as a Platform as a Service for the developers for use.
+* Served as a Platform as a Service for the developers for use.
 * AWS  orchestrates application and environments using your code
 * Allows users to focus on coding: Infrastructure is handled by AWS
 * Pay only for the AWS service.
 * Pay only for the AWS services on the backend that EB uses
 swap urls
-
 * Applications with Application Versions
 * Environments and Environment Tiers
 * Environments Configurations
 * Platforms
 * Elastic Beanstalk HTTP Web Server or Worker.
+
+### Example Code for Elastic BeanStalk
+- [Elastic BeanStalk Terraform](Template)
+- [Elastic BeanStalk aws cli](Template)
 
 ## AWS OpsWorks
 * Puppet
@@ -24,67 +27,18 @@ swap urls
 * App represent your code that you want to deploy into AWS.
 * Used to deploy Chef Cookbooks or Puppet Recipes.
 
-## AWS System Manager
+## AWS Code Services
 
-* System Manager (SSM) allow us to view and control AWS infrastructure.
-* Leverages Managed Instances to configure and maintain compute compliance.
-* Logical grouping is done via tags known as Resource Tags
-* Contains several capabilities grouped into categories.
-* Simplifies resource and applications management at scale.
-* SSM leverages an SSM Agent
-* Managed Inventory and Patches
-* Allow for command executions.
-* Store configurations and secrets data.
-
-## AWS Systems Manager - Patch Manager
-
-* Uses Patch Baselines to auto-approve or auto-reject patches.
-* Leverage Maintenance Windows to define approved/denied times.
-* Group instances using Patch Groups to assign to a patch baseline.
-* View instances compliance status for all managed instances.
-* All patch updates are executed using run command.
-  
-## Amazon EventBridge - Overview
-* Serverless event bus that connects apps with data from source.
-* Targets include: Lambda Functions, HTTP endpoints, API Gateways.
-* Receives an Event, applies a Rule, and routes event to a Target.
-* Event patterns or Scheduled  Events.
-
-## Amazon S3 - Event Notifications
-
-* S3 can generate notifications triggered by specified events.
-* Variety of targets: SNS, SQS, Lambda
-* Several predefined events by AWS for you to choose from
-* Events are delivered in a "at least once" fashion.
-* Create custom filters using key prefixes.
-
-## AWS Config
-
-* Records Configuration change history on resources.
-* Allows for audits and compliance checks.
-* Exists per region
-  - Cross-region recording
-  - Aggregate recording
-* Works with SNS to trigger events
-* Evaluates rules when changes are recorded.
-
-
-AWs Systems Manager
-Patching Management
-Application Lifecyle
-Parameters Stores
-
-Code Commit
-CodeBuild
-CodeDeploy
-Code Pipeline
-
-## AWS CodeBuild
+### AWS CodeBuild
 Code building (and testing) as a service
 Billed for the underlying resources used during builds
 Docker build environments
 Tightly integrates with other AWS Services
 Leverages 'buildspec.yml' for customizations
+
+
+### Example Code GIT Repository with AWS CodeCommit
+[AWS Commit](Template)
 
 ### Four Phases:
 Install
@@ -100,7 +54,7 @@ Post Build
 * EC@ and On-prem utilize the AWS CodeDeploy Agent.
 * Appspec.yml used to configure deployments.
 
-## Appsec.yml Lifecycle Events
+### Appsec.yml Lifecycle Events
 * ApplicationStop
 * DownloadBundle
 * BeforeInstall
@@ -139,6 +93,8 @@ hooks:
 * Ability to load artifacts and create artifacts.
 * Allows for manual approvals where required.
 
+Code Commit ====> CodeBuild ======> CodeDeploy ======> Code Pipeline
+
 ## AWS Cloud Formation
 
 * Template files are json or yml
@@ -148,9 +104,74 @@ hooks:
 * Cross-Stack Reference: Referring to exported resources in another stack
 * StackSets: Stacks that live across multiple accounts using the same template.
 
+## AWS System Manager
+
+* System Manager (SSM) allow us to view and control AWS infrastructure.
+* Leverages Managed Instances to configure and maintain compute compliance.
+* Logical grouping is done via tags known as Resource Tags
+* Contains several capabilities grouped into categories.
+* Simplifies resource and applications management at scale.
+* SSM leverages an SSM Agent
+* Managed Inventory and Patches
+* Allow for command executions.
+* Store configurations and secrets data.
+
+## AWS Systems Manager - Patch Manager
+
+* Uses Patch Baselines to auto-approve or auto-reject patches.
+* Leverage Maintenance Windows to define approved/denied times.
+* Group instances using Patch Groups to assign to a patch baseline.
+* View instances compliance status for all managed instances.
+* All patch updates are executed using run command.
+
+### Example Code for Patching
+- [Patch Manager Terraform](Template)
+- [Patch Manager aws cli](template)
+  
+## Amazon EventBridge - Overview
+* Serverless event bus that connects apps with data from source.
+* Targets include: Lambda Functions, HTTP endpoints, API Gateways.
+* Receives an Event, applies a Rule, and routes event to a Target.
+* Event patterns or Scheduled  Events.
+  
+### Example Code for Event Patterns and Scheduled Events
+- [Event Patterns and Scheduled Events Terraform](Template)
+- [Event Patterns and Scheduled Events aws cli](Template)
+
+## Amazon S3 - Event Notifications
+
+* S3 can generate notifications triggered by specified events.
+* Variety of targets: SNS, SQS, Lambda
+* Several predefined events by AWS for you to choose from
+* Events are delivered in a "at least once" fashion.
+* Create custom filters using key prefixes.
+
+### Example Code for Event Patterns and Scheduled Events
+- [Lambda with S3 Terraform](Template)
+- [Lambda with S3 aws cli](Template)
+
+## AWS Config
+
+* Records Configuration change history on resources.
+* Allows for audits and compliance checks.
+* Exists per region
+  - Cross-region recording
+  - Aggregate recording
+* Works with SNS to trigger events
+* Evaluates rules when changes are recorded.
+
+### Example Code for Enabling AWS Config
+- [AWS Config Terraform](Template)
+- [AWS Config aws cli](Template)
+
 ## Other
 * Covered Elastic Beanstalk architecture and concepts.
 * When to use AWS OpsWorks (Managed Puppet or Chef).
 * CodeCommit for version control, Codebuild for builds and tests.  CodeDeploy for deployments, and Codepipeline to orchestrate.
 * What cloudformation accomplishes (Infrastructure as Code).
 * Important CloudFormation concepts like StackSets, Nested Stacks and Intrinsic Functions.
+- AWS Systems Manager
+- Patching Management
+- Application Lifecycle
+- Parameters Stores
+
