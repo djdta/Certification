@@ -94,6 +94,7 @@ There 3 different type of endpoints to use.
 ### AWS WAF
 - Protect Web services and APIs from common threats
 
+
 ### AWS Shield
 - AWS Shield Protects against DDoS
      - Shield Standard is a always on service
@@ -105,3 +106,7 @@ There 3 different type of endpoints to use.
        - Proactive response to threats
        - DDoS Cost Protection
        - Centralized  Protection Management
+
+### Example Code for AWS WAF
+- [AWS WAF Terraform](Template)
+- [AWS WAF aws cli](Template)
