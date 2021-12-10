@@ -62,7 +62,7 @@ Below is a link i have found in regards to the Shared Responsibility Model which
 - Business and Enterprise plans Get all no restrictions.
 
 ### Example Leveraging AWS Trusted Advisor
-- [Trusted Advisor Terraform](Template)
+
 - [Trusted Advisor aws cli](Template)
 
 ## AWS GuardDuty
