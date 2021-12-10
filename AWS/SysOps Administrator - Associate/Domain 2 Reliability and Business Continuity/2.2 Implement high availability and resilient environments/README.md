@@ -96,7 +96,7 @@ This service is designed for windows instances to connect to a windows share run
 ## Route53 Routing Configurations
 - Production ready infrastructure in different regions
 - Simple Single Resource, Single Region
-- Active - Active Availble in a second region
+- Active - Active Available in a second region
 - Active - Passive Stand-by infrastructure region .
 
 ## Route53 Routing Polices

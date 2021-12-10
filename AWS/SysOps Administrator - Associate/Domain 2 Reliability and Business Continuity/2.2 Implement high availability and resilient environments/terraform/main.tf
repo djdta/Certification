@@ -1,3 +1,13 @@
+## File System FSx
+
+resource "aws_fsx_windows_file_system" "example" {
+  active_directory_id = aws_directory_service_directory.example.id
+  kms_key_id          = aws_kms_key.example.arn
+  storage_capacity    = 300
+  subnet_ids          = [aws_subnet.example.id]
+  throughput_capacity = 1024
+}
+
 #TODO: Code example of Load Balancer with HA 
 data "aws_vpc" "id" {
   id = var.vpc_id
@@ -93,5 +103,19 @@ resource "aws_elb" "bar" {
 
   tags = {
     Name = "CLB-01"
+  }
+}
+
+## Route 53 Health Check
+resource "aws_route53_health_check" "example" {
+  fqdn              = "example.com"
+  port              = 80
+  type              = "HTTP"
+  resource_path     = "/"
+  failure_threshold = "5"
+  request_interval  = "30"
+
+  tags = {
+    Name = "tf-test-health-check"
   }
 }
