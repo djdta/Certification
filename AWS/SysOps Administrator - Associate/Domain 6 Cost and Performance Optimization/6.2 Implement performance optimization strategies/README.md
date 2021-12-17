@@ -1,0 +1,1 @@
+## 6.2 Implement performance optimization strategies
