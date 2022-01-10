@@ -1,75 +1,75 @@
-# Secuirty and Compliance
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="">
+    <img src="tbc">
+  </a>
 
-We all know that secuirty is a big part of how to secure
+  <h3 align="center">Template</h3>
 
-## IAM Users
+  <p align="center">
+    This is some template text.
+    <br />
+    <a href="Needs to be added">Report Bug</a>
+    ·
+    <a href="needs to be added">Request Feature</a>
+  </p>
+</p>
 
-* Users single unit which allows users to login.
-* Users can have cli access without access to management console.
-* Users with just managemant access does not have cli access.
-* User can setup mfa USB or Phone.
+<!-- TABLE OF CONTENTS -->
 
-#### Example Code
+## Table of Contents
 
-```resource "aws_iam_user" "lb" {
-  name = "Test"
-  path = "/"
-  force_destroy = true 
+- [Template](#template)
+  - [Template](#template-1)
+- [Template](#template-2)
+  - [Template:](#template-3)
+- [Open Issues](#open-issues)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-  tags = {
-    tag-key = "tag-value"
-  }
-}
-```
+<!-- ABOUT THE PROJECT -->
 
-## IAM Groups
+# Template
+Template text
 
-* Groups can be used to seprate into functions i.e Administrator, Support Staff
+## Template
 
-##### Example Code
+- <a href="tbc">tmp</a> - Template
+- <a href="tbc">tmp</a> - Template
+- <a href="tbc">tmp</a> - Template
+- <a href="tbc">tmp</a> - Template
 
-```resource "aws_iam_group" "developers" {
-  name = "developers"
-  path = "/users/"
-}
-```
+# Template
+Template text in this section.
 
-## IAM Policy
+## Template:
+Template text in this section.
 
-* Policy can be added to users and groups.
-* Any Deny rules is the highest of approve.
-* You can assign more than one policy to a user or group.
 
-##### Example Code
+# Open Issues
 
-```resource "aws_iam_policy" "policy" {
-  name        = "test_policy"
-  path        = "/"
-  description = "My test policy"
+See the [open issues](tbc)Template text for this section
 
-  # Terraform's "jsonencode" function converts a
-  # Terraform expression result to valid JSON syntax.
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Action = [
-          "ec2:Describe*",
-        ]
-        Effect   = "Allow"
-        Resource = "*"
-      },
-    ]
-  })
-}
-```
+# Contributing
 
-# Shared Responsibility Model
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-When we talk about the shared responsibility model for any cloud provider they would have a smilar answer that all of the datacentres,hardware and networking is reailiably and secure.  When you start using the services on there platform of choice, then the user should be responsibility for the up keep of any resources deployed.
 
-That said all major cloud providers would have the tools to help in finding these issues and reporting them to you.  Again the tools would be at a price per hour.
+1. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+2. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Push to the Branch (`git push origin feature/AmazingFeature`)
+4. Open a Pull Request.
 
-Below is a link i have found in regards to the Shared Responsibility Model which should help in understanding further this requirement.
 
-[Shared Responsibility Model](https://www.cloudpassage.com/articles/shared-responsibility-model-explained/)
+# Contact
+
+For any help and feedback please feel free to reach out to the following
+
+* tbc
+
+<!-- ACKNOWLEDGEMENTS -->
+
+# Acknowledgements
+- stiliajohny.github.io

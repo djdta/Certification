@@ -4,10 +4,10 @@
   <a href="" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Amazon Web Services Study Guide</h3>
+  <h3 align="center">Hasihcorp Certification</h3>
 
   <p align="center">
-    Sample Text
+    Study Guides
     <br />
     <a href="./README.md"><strong>Explore the docs »</strong></a>
     <br />
@@ -22,26 +22,26 @@
 ## Table of Contents
 
 - [About The Project](#about-the-project)
-- [SysOps Administrator - Associate](#SysOps-Administrator-Associate)
-- [DevOps Engineer - Professional](#DevOps-Engineer-Professional)
-- [Security - Specialty](#Security-Specialty)
+- [Consul Associate](#Consul-Associate)
+- [Terraform Associate](#Terraform-Associate)
+- [Vault Associate](#Vault-Associate)
 - [Contributing](#contributing)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
 <!-- ABOUT THE PROJECT -->
 
-## About This
+## About The Project
 Sample text
 
 
-## SysOps Administrator - Associate
+## Consul Associate
 Sample Text
 
-## DevOps Engineer - Professional
+## Terraform Associate
 Sample Text
 
-## Security - Specialty
+## Vault Associate
 Sample Text
 
 <!-- CONTRIBUTING -->
